@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="../assests/css/bootstrap.min.css">  <!-- Bootstrap style -->
 	<link rel="stylesheet" href="../assests/css/templatemo-style.css">  <!-- Templatemo style -->
 	<link rel="stylesheet" href="../assests/css/main.css">
+
+	<!-- load js -->
+	<script type="text/javascript" src="../assests/js/contactForm.js"></script>
 </head>
 <body>
 	<div class="tm-header">
@@ -70,13 +73,13 @@
 				  </script>
 			  
 	</div>
-	<div id="form">
+	<div>
 		<section id="contact">
 			<div class="section-content">
 				<h1 class="section-header">Send us a message</h1>
 			</div>
 			<div class="container">
-				<form>
+				<form id="contactForm">
 					<div class="col-md-6 form-line">
 						<div class="form-group">
 							<label for="nameContact">Your name</label>
@@ -97,7 +100,7 @@
 							<textarea  class="form-control" id="descriptionContact" placeholder="Enter Your Message"></textarea>
 						</div>
 						<div>
-							<button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+							<button type="button" class="btn btn-default submit" onclick="sendMessage();"> Send Message</button>
 						</div>
 					</div>
 				</form>
