@@ -50,3 +50,9 @@ textarea.form-control {
   background-color: grey;
   color: #fff;
 }
+
+#map{
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+}
