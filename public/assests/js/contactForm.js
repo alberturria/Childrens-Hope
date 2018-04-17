@@ -1,5 +1,5 @@
 function sendMessage(){
-	document.getElementById("contactForm").reset;
+	document.getElementById("contactForm").reset();
 
 	alert("Sent message");
 }
