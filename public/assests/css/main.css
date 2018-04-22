@@ -1,57 +1,58 @@
-/*Contact sectiom*/
+/*Contact section*/
 .content-header{
-  font-family: 'Oleo Script', cursive;
-  color:#000;
-  font-size: 45px;
+	font-family: 'Oleo Script', cursive;
+	color:#000;
+	font-size: 45px;
 }
 
 .section-content{
-  text-align: center; 
+	text-align: center; 
 
 }
 #contact{
-  font-family: 'Teko', sans-serif;
-  padding-top: 60px;
-  width: 100%;
-  width: 100vw;
-  height: 550px;
-  color : #000;    
+	font-family: 'Teko', sans-serif;
+	padding-top: 60px;
+	width: 100%;
+	width: 100vw;
+	height: 550px;
+	color : #000;    
 }
 .contact-section{
-  padding-top: 40px;
+	padding-top: 40px;
 }
 .contact-section .col-md-6{
-  width: 50%;
+	width: 50%;
 }
 
 .form-line{
-  border-right: 1px solid #B29999;
+	border-right: 1px solid #B29999;
 }
 
 .form-group{
-  margin-top: 10px;
+	margin-top: 10px;
 }
 label{
-  font-size: 1.3em;
-  line-height: 1em;
-  font-weight: normal;
+	font-size: 1.3em;
+	line-height: 1em;
+	font-weight: normal;
 }
 .form-control{
-  font-size: 1.3em;
-  color: #080808;
+	font-size: 1.3em;
+	color: #080808;
 }
 textarea.form-control {
-    height: 135px;
-   /* margin-top: px;*/
+	height: 135px;
+	 /* margin-top: px;*/
 }
 .submit{
-  float: right;
-  width: 50%;
-  background-color: grey;
-  color: #fff;
+	float: right;
+	width: 50%;
+	background-color: grey;
+	color: #fff;
 }
 
 #map{
+<<<<<<< HEAD
     width: 400px;
     height: 400px;
     margin-left: 20px;
@@ -75,4 +76,49 @@ textarea.form-control {
   margin-left: auto;
   margin-right: auto;
   display: block;
+=======
+	width: 400px;
+	height: 400px;
+	margin-left: 20px;
+}
+
+/*People index*/
+.photoPersonal{
+	float: left;
+	margin-right: 10px;
+	height: 100px;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 50%;
+	background-size: 100% auto;
+}
+
+.indexPeopleFooter{
+	text-align: center;
+}
+
+.selectedIndex{
+	margin-left: 5px;
+	margin-right: 5px;
+	color: #cc9900;
+	text-decoration: underline #cc9900;
+}
+.selectedIndex:hover{
+	margin-left: 5px;
+	margin-right: 5px;
+	color: #ffc61a;
+	text-decoration: underline #ffc61a;
+}
+
+.normalIndex{
+	margin-left: 5px;
+	margin-right: 5px;
+	color: grey;
+}
+.normalIndex:hover{
+	margin-left: 5px;
+	margin-right: 5px;
+	color: #ffc61a;
+>>>>>>> cd79366239debe0748cbfd0926e8b0611ac62459
 }
