@@ -3,10 +3,14 @@
 <head>
 	<title>Children's Hope</title>
 
+	<!-- load js -->
+	<script type="text/javascript" src="../assests/js/peopleIndex.js"></script>
+
 	<!-- load stylesheets -->
 	<link rel="stylesheet" href="../assests/css/openSans.css">  <!-- Google web font "Open Sans" -->
 	<link rel="stylesheet" href="../assests/css/bootstrap.min.css">  <!-- Bootstrap style -->
 	<link rel="stylesheet" href="../assests/css/templatemo-style.css">  <!-- Templatemo style -->
+	<link rel="stylesheet" href="../assests/css/main.css">
 </head>
 <body>
 	<div class="tm-header">
@@ -42,7 +46,7 @@
 								<a href="location.html" class="nav-link">Location</a>
 							</li>
 							<li class="nav-item active">
-								<a href="people.html" class="nav-link">People</a>
+								<a href="people.html" class="nav-link" >People</a>
 							</li>
 						</ul>
 					</div>
@@ -50,5 +54,12 @@
 			</div>
 		</div>
 	</div>
+	<section class="tm-section" style="padding-bottom: 30px;">
+		<div id="indexPeopleContent" class="container-fluid">
+		</div>
+	</section>
+	<div class="indexPeopleFooter" id="indexPeopleNumber" class="container-fluid">	
+	</div>
+	<button onclick="loadPeople();">carga</button>
 </body>
 </html>
