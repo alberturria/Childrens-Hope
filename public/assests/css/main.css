@@ -52,7 +52,6 @@ textarea.form-control {
 }
 
 #map{
-<<<<<<< HEAD
     width: 400px;
     height: 400px;
     margin-left: 20px;
@@ -76,7 +75,6 @@ textarea.form-control {
   margin-left: auto;
   margin-right: auto;
   display: block;
-=======
 	width: 400px;
 	height: 400px;
 	margin-left: 20px;
@@ -120,5 +118,4 @@ textarea.form-control {
 	margin-left: 5px;
 	margin-right: 5px;
 	color: #ffc61a;
->>>>>>> cd79366239debe0748cbfd0926e8b0611ac62459
 }
