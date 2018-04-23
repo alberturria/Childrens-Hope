@@ -74,6 +74,22 @@ textarea.form-control {
 	height: 500px;
 }
 
+#locationImg{
+	display: block;
+	margin: auto;
+	height: 500px;	
+	margin-bottom: 10%;
+	margin-top: 10%;
+}
+
+#locationTittle{
+	text-align: center;
+}
+
+#locationDescription{
+	text-align: center;
+}
+
 .img-service {
 	width: auto;
 	height: auto;

@@ -2,11 +2,10 @@
 var locations = [
 // number of people
 // Name      image       description
-["Milano", "./img/milan.png", "A brief description"],
-["Bologna", "./img/bologna.png", "A brief description"],
-["Naples", "./img/naples.png", "A brief description"],
-["Sicilia", "./img/rome.png", "A brief description"],
-["Pisa", "./img/servicio.png", "A brief description"]
+["Milano", "../assests/img/milan.jpg", "A brief description"],
+["Bologna", "../assests/img/bologna.jpg", "A brief description"],
+["Naples", "../assests/img/naples.jpg", "A brief description"],
+["Rome", "../assests/img/rome.jpg", "A brief description"]
 ];
 
 $(document).ready(function(){
@@ -23,7 +22,7 @@ function getQueryVariable(variable) {
 function loadlocationDescription(index){
     document.getElementById("locationTittle").innerHTML= getQueryVariable(location);
     var current = locations;
-    for(var i=0; i < locations.length/3; i++)
+    for(var i=0; i < locations.length; i++)
     {
         if(getQueryVariable(location)==locations[i][0])
         {
