@@ -3,10 +3,14 @@
 <head>
 	<title>Children's Hope</title>
 
+	<script src="../assests/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../assests/js/peopleProfile.js"></script>
+
 	<!-- load stylesheets -->
 	<link rel="stylesheet" href="../assests/css/openSans.css">  <!-- Google web font "Open Sans" -->
 	<link rel="stylesheet" href="../assests/css/bootstrap.min.css">  <!-- Bootstrap style -->
 	<link rel="stylesheet" href="../assests/css/templatemo-style.css">  <!-- Templatemo style -->
+	<link rel="stylesheet" href="../assests/css/main.css">
 </head>
 <body>
 	<div class="tm-header">
@@ -52,19 +56,14 @@
 	</div>
 
 
-	<section id="info_person" >
-		<img id="fotoperfil" src="../assests/img/foto_perfil.png" >
-		<h3>Name: <span></span></h3>
-		<h3>Email: <span></span></h3>
-		<h3>Role: </h3>
 
-	</section>
-	
-	<section id="contact_person">
-		<div class="section-content">
-			<h1 class="section-header">Send a message to nombre_persona</h1>
-		</div>
-		
-	</section>
+	<img id="profilePicture"  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 profilePicture" >
+	<div class="profileInfo col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+		<h2 id="namePerson" class="principalName"></h2>
+		<div id="contactPerson" ></div>
+		<div id="rolePerson" ></div>
+	</div>
+
+
 </body>
 </html>
