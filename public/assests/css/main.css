@@ -119,3 +119,17 @@ textarea.form-control {
 	margin-right: 5px;
 	color: #ffc61a;
 }
+/*People content*/
+.profilePicture{
+	margin-top: 6%;
+	float: left;
+}
+
+.profileInfo{
+	margin-top: 6%;
+	float: left;
+}
+
+.principalName{
+	margin-bottom: 10%;
+}
