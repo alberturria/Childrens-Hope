@@ -17,9 +17,9 @@ var people = [
 ["Person12", "p12.png", "A brief description"]
 ];
 
-function loadPeople(){
+$(document).ready(function(){
 	loadPeoplePage(1);
-}
+});
 
 function loadPeoplePage(index){
 	document.getElementById("indexPeopleContent").innerHTML=contentIndexSelected(index);

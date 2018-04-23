@@ -68,13 +68,13 @@ textarea.form-control {
 }
 
 .img-service {
-  width: auto;
-  height: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+	width: auto;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 	width: 400px;
 	height: 400px;
 	margin-left: 20px;
