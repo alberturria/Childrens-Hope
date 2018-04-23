@@ -61,6 +61,10 @@ textarea.form-control {
     margin-bottom: 20px;
 }
 
+#location-links{
+	margin-left: 20%;
+}
+
 .tm-location-img-container {
 	padding-top: 50pc;
 	background-image: url('../img/milan.jpg');

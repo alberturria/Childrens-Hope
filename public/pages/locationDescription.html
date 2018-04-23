@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="../assests/css/templatemo-style.css">  <!-- Templatemo style -->
     <link rel="stylesheet" href="../assests/css/main.css">
     
-    	<!-- load js -->
-	<script type="text/javascript" src="../assests/js/googlemap.js" ></script>
+		<!-- load js -->
+	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+	<script type="text/javascript" src="../assests/js/locationIndex.js"></script>
+
 
 
 </head>
@@ -59,24 +61,14 @@
 
 
     <div class="tm-location-img-container">
-        <img src="../assests/img/milan.jpg" alt="Image" class="hidden-lg-up img-fluid">        
+        <img id="locationImg" src="../assests/img/milan.jpg" alt="Image" class="hidden-lg-up img-fluid">        
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="tm-2-col-left">
-                        <h1 class="tm-gold-text tm-tittle">
-                            Localizacion Milano
+                        <h1 class="tm-gold-text tm-tittle" id="locationTittle">
                         </h1>
-                        <p class="tm-margin-b-30">
-                            Este es un parrafo de descripcion de la localizacion de arriba.
-                            Este es un parrafo de descripcion de la localizacion de arriba
-                            Este es un parrafo de descripcion de la localizacion de arriba
-                            Este es un parrafo de descripcion de la localizacion de arriba
-                            Este es un parrafo de descripcion de la localizacion de arriba
-                            Este es un parrafo de descripcion de la localizacion de arriba
-                            Este es un parrafo de descripcion de la localizacion de arriba
-                            Este es un parrafo de descripcion de la localizacion de arriba
-
+                        <p class="tm-margin-b-30" id="locationDescription">
                         </p>  
                     </div>
                 </div>
