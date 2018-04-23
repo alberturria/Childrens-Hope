@@ -48,17 +48,11 @@ function contentIndexSelected(number){
 	var result="";
 	
 	for (var i=(number-1)*6; i<personal.length-1 && i<number*6; i++) {
-		if (i%2)
-			result+= '<div class="row">';
-
 		var current=personal[i+1];
 		result+='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6"><div class="tm-content-box tm-margin-b-40">'+
 		'<div class="photoPersonal" style="background-image: url('+"'../assests/img/people/"+current[1]+"')"+'"></div>'+
 		'<h4 class="tm-gold-text">'+current[0]+'</h4>'+
 		'<p>'+current[2]+'</p></div></div>';
-		
-		if (i%2)
-			result+= '</div>';
 	}
 
 	return result;
