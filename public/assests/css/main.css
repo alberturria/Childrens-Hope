@@ -90,6 +90,12 @@ textarea.form-control {
 	text-align: center;
 }
 
+/*Service index image */
+.serviceImageIndex{
+	width: max-content;
+	height: 150px;
+}
+
 .img-service {
 	width: auto;
 	height: auto;
