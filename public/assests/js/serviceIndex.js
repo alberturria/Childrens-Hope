@@ -2,10 +2,12 @@
 var services = [
     // number of people
     // Name      image       description
-    ["Canteen", "../assests/img/milan.jpg", "A brief description"],
-    ["Cafe", "../assests/img/bologna.jpg", "A brief description"],
-    ["Parking", "../assests/img/naples.jpg", "A brief description"],
-    ["Rome", "../assests/img/rome.jpg", "A brief description"]
+    ["Canteen", "../assests/img/canteen.jpg", "A brief description"],
+    ["Cafe", "../assests/img/cafe.jpg", "A brief description"],
+    ["Parking", "../assests/img/parking.jpg", "A brief description"],
+    ["Rehabilitation", "../assests/img/rehabilitation.jpg", "A brief description"],
+    ["Playroom", "../assests/img/playroom.jpg", "A brief description"],
+    ["Education", "../assests/img/education.jpg", "A brief description"]
     ];
     
     $(document).ready(function(){
