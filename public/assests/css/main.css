@@ -100,7 +100,12 @@ textarea.form-control {
 	opacity: 0.5;
 }
 
-.tm-gold-text:hover{
+.textoIndice {
+	color: #cc9900;
+}
+
+
+.textoIndice:hover{
 	color: #000;
 }
 
