@@ -2,7 +2,7 @@
 var services = [
     // number of people
     // Name      image       description
-    ["Canteen", "../assests/img/canteen.jpg", "A brief description"],
+    ["Canteen", "../assests/img/canteen.jpg", "In some of our centers you will find a possibility to take a snack. There is the possibility of asking for a menu. These will change every day of the week  and they will have a cost of 8 euros. It will be open from 12:00 am until 16:00 pm everyday" ],
     ["Cafe", "../assests/img/cafe.jpg", "A brief description"],
     ["Parking", "../assests/img/parking.jpg", "A brief description"],
     ["Rehabilitation", "../assests/img/rehabilitation.jpg", "A brief description"],
