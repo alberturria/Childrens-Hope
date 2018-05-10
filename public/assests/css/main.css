@@ -96,9 +96,18 @@ textarea.form-control {
 	height: 150px;
 }
 
+.serviceImageIndex:hover{
+	opacity: 0.5;
+}
+
+.tm-gold-text:hover{
+	color: #000;
+}
+
+
 .img-service {
-	width: max-content;
-	height: auto;
+	width: 100%;
+	height: 350px;
 	margin-top: 5px;
 	margin-bottom: 10px;
 	display: block;
