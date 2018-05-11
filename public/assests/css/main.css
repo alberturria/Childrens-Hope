@@ -61,6 +61,11 @@ textarea.form-control {
     margin-bottom: 20px;
 }
 
+#introductionDescription{
+	font-size: 1.4rem;
+	max-width: 1000px;
+	margin: 0 auto 80px;
+}
 
 .leftPadding{
 	padding-left: 20%;
