@@ -1,3 +1,15 @@
+/*Html*/
+html{
+	min-height: 100%;
+	position: relative;
+}
+/*Footer*/
+footer{
+	bottom: 0;
+	height: 100px; /* valor que necesites */
+	position: absolute;
+	width: 100%;
+}
 /*Contact section*/
 .content-header{
 	font-family: 'Oleo Script', cursive;
