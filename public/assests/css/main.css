@@ -195,14 +195,21 @@ textarea.form-control {
 	position: relative;
 }
 
+.imageNew{
+	width: 100%; 
+	height: 300px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 .contentNew {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(29, 106, 154, 0.72);
-	color: #cc9900;
+	background: rgba(169,169,169,0.8);
+	color: #000000;
 	visibility: hidden;
 	opacity: 0;
 	margin-bottom: 0;
@@ -232,4 +239,13 @@ textarea.form-control {
 	margin-left: 3%;
 	margin-right: 3%;
 	font-size: medium;
+}
+
+.contentNew .dateNew{
+	position: relative;
+	background: no-repeat;
+	margin-left: 3%;
+	margin-right: 3%;
+	font-size: medium;
+	text-align: left;
 }
