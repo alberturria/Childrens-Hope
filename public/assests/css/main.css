@@ -175,10 +175,12 @@ textarea.form-control {
 .normalIndex:hover{
 	color: #ffc61a;
 }
+
 /*People content*/
 .profilePicture{
 	margin-top: 6%;
 	float: left;
+	width: auto;
 }
 
 .profileInfo{

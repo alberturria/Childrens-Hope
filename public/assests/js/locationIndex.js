@@ -1,6 +1,5 @@
 // variable to simulate we're receiving the data from a database
 var locations = [
-// number of people
 // Name      image       description
 ["Milano", "../assests/img/milan.jpg", "In Milan you will find our main center. It it provided wit all the services that we have. Even not being the biggest one, this center provides a great solution for those who are looking for some help. Find us in Piazza Leonardo Da Vinci."],
 ["Bologna", "../assests/img/bologna.jpg", "We count with one of our center in this wonderful city. Located in the historic center this small center offers you some services with the best specialist of the sector. Find us in Via Santa Margherita 3."],
@@ -13,7 +12,7 @@ $(document).ready(function(){
 });
 
 
-function getQueryVariable(variable) {
+function getQueryVariable() {
     var query = document.URL;
     var vars = query.split("=");
     return vars[1];
