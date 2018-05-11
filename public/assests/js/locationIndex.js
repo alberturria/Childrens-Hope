@@ -19,11 +19,11 @@ function getQueryVariable() {
 }
 
 function loadlocationDescription(index){
-    document.getElementById("locationTittle").innerHTML= getQueryVariable(location);
+    document.getElementById("locationTittle").innerHTML= getQueryVariable();
     var current = locations;
     for(var i=0; i < locations.length; i++)
     {
-        if(getQueryVariable(location)==locations[i][0])
+        if(getQueryVariable()==locations[i][0])
         {
             document.getElementById("locationDescription").innerHTML= locations[i][2];   
             document.getElementById("locationImg").src=locations[i][1];

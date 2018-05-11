@@ -1,15 +1,15 @@
-/*Html*/
-html{
+html {
+	height: 100%;
+  }
+  body {
 	min-height: 100%;
-	position: relative;
-}
-/*Footer*/
-footer{
-	bottom: 0;
-	height: 100px; /* valor que necesites */
-	position: absolute;
-	width: 100%;
-}
+	display: grid;
+	grid-template-rows: 1fr auto;
+  }
+  .footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
+  }
 /*Contact section*/
 .content-header{
 	font-family: 'Oleo Script', cursive;
