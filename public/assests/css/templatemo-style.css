@@ -83,9 +83,9 @@ h2 { font-size: 2.2rem; }
 }
 
 .tm-home-img-container {
-	background-image: url('../img/tm-home-img.jpg');
+	background-image: url('../img/home.jpeg');
 	background-size: auto;
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 	height: 500px;
 }
