@@ -50,9 +50,9 @@ function contentIndexSelected(number){
 	for (var i=(number-1)*6; i<personal.length-1 && i<number*6; i++) {
 		var current=personal[i+1];
 		result+='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6"><div class="tm-content-box tm-margin-b-40">'+
-		'<div class="photoPersonal" style="background-image: url('+"'../assests/img/people/"+current[1]+"')"+'"></div>'+
+		'<a href="peopleProfile.html"><div class="photoPersonal" style="background-image: url('+"'../assests/img/people/"+current[1]+"')"+'"></div>'+
 		'<h4 class="tm-gold-text">'+current[0]+'</h4>'+
-		'<p>'+current[2]+'</p></div></div>';
+		'<p>'+current[2]+'</p></a></div></div>';
 	}
 
 	return result;
