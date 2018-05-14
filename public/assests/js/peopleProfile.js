@@ -1,10 +1,10 @@
 // variable to simulate we're receiving the data from a database
 var people = [
 // ID   Name      image       role        contact
-["0", "Person1", "p1.png", "A brief description", "email@hotmail.com"],
-["1", "Person2", "p2.png", "A brief description", "email@hotmail.com"],
-["2", "Person3", "p3.png", "A brief description", "email@hotmail.com"],
-["3", "Person4", "p4.png", "A brief description", "email@hotmail.com"],
+["0", "Maurizia Jhonson", "mauriziaJhonson.jpeg", "A brief description", "MJhonson@csHope.com"],
+["1", "Pietro Baldi", "pietroBaldi.jpeg", "A brief description", "pBaldi@csHope.com"],
+["2", "Lamberta Pérez", "lambertaPerez.jpeg", "A brief description", "lPerez@csHope.com"],
+["3", "Nadia Ferrari", "nadiaFerrari.jpg", "A brief description", "nFerrari@csHope.com"],
 ["4", "Person5", "p5.png", "A brief description", "email@hotmail.com"],
 ["5", "Person6", "p6.png", "A brief description", "email@hotmail.com"],
 ["6", "Person7", "p7.png", "A brief description", "email@hotmail.com"],
