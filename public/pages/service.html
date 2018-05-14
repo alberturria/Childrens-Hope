@@ -12,6 +12,12 @@
 	<link rel="stylesheet" href="../assests/css/bootstrap.min.css">  <!-- Bootstrap style -->
 	<link rel="stylesheet" href="../assests/css/templatemo-style.css">  <!-- Templatemo style -->
 	<link rel="stylesheet" href="../assests/css/main.css">  <!-- Main style -->
+
+	<!-- load JS files -->
+	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+	<script type="text/javascript" src="../assests/js/service.js"></script>
 </head>
 <body>
 	<div class="tm-header">
@@ -50,63 +56,30 @@
 	<section class="tm-section">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-margin-b-30 tm-content-box">
-						<a href="serviceDescription.html?service=Canteen">
-							<img src="../assests/img/canteen.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Canteen</center></h4>
-						</a>
-						<p>Take a rest in one of our relax places</p>
+				<div class="tm-margin-b-40 col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						Location:
 					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-margin-b-30 tm-content-box">
-						<a href="serviceDescription.html?service=Cafe">
-							<img src="../assests/img/cafe.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Cafe</center></h4>
-						</a>
-						<p>Do you need a coffe? Don't hesitate to try one of our cappucinos</p>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input type="radio" name="location" onclick="serviceByLocation();"> All
 					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-margin-b-30 tm-content-box">
-						<a href="serviceDescription.html?service=Parking">
-							<img src="../assests/img/parking.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Parking</center></h4>
-						</a>
-						<p>Underground parking for those rainy days</p>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input id="milano" type="radio" name="location" onclick="serviceByLocation();"> Milano
 					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-margin-b-30 tm-content-box">
-						<a href="serviceDescription.html?service=Rehabilitation">
-							<img src="../assests/img/rehabilitation.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Rehabilitation</center></h4>
-						</a>
-						<p>Enjoy a medical rehabilitation in our centers</p>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input id="bologna" type="radio" name="location" onclick="serviceByLocation();"> Bologna
 					</div>
-				</div>
-			</div> <!-- row -->
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-margin-b-30 tm-content-box">
-						<a href="serviceDescription.html?service=Playroom">
-							<img src="../assests/img/playroom.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Playroom</center></h4>
-						</a>
-						<p>The little ones will have fun with different games</p>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input id="rome" type="radio" name="location" onclick="serviceByLocation();"> Rome
 					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-margin-b-30 tm-content-box">
-						<a href="serviceDescription.html?service=Education">
-							<img src="../assests/img/education.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Education</center></h4>
-						</a>
-						<p>Invest in the education of your children</p>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input id="naples" type="radio" name="location" onclick="serviceByLocation();"> Naples
 					</div>
+
 				</div>
-			</div> <!-- row -->
+				<div id="services" class="col-xs-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
+				</div>	
+			</div>
 		</div>
 	</section>
 	<footer class="tm-footer">
@@ -124,9 +97,5 @@
 			</div>
 		</div>
 	</footer>
-	<!-- load JS files -->
-	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
-	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
 </body>
 </html>
