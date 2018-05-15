@@ -5,14 +5,18 @@ var people = [
 ["1", "Pietro Baldi", "pietroBaldi.jpeg", "Counselor"],
 ["2", "Lamberta Pérez", "lambertaPerez.jpeg", "Lawyer"],
 ["3", "Nadia Ferrari", "nadiaFerrari.jpg", "Psychiatrist"],
-["4", "Person5", "p5.png", "A brief description"],
-["5", "Person6", "p6.png", "A brief description"],
-["6", "Person7", "p7.png", "A brief description"],
-["7", "Person8", "p8.png", "A brief description"],
-["8", "Person9", "p9.png", "A brief description"],
-["9", "Person10", "p10.png", "A brief description"],
-["10", "Person11", "p11.png", "A brief description"],
-["11", "Person12", "p12.png", "A brief description"]
+["4", "Yuri Esposito", "p5.png", "Security"],
+["5", "Isabella Ricci", "p6.png", "Teacher"],
+["6", "Linda Romano", "p7.png", "Waiter"],
+["7", "Antonella Greco", "p8.png", "Physiotherapist"],
+["8", "Andrea Romanini", "p9.png", "Nurse"],
+["9", "Lucca Colombetti", "p10.png", "Administrative"],
+["10", "Giovanni Grieco", "p11.png", "Carer"],
+["11", "Angelina Marinazzo", "p12.png", "Waiter"],
+["12", "Franchesca Romanatti", "p13.png", "Doctor"],
+["13", "Benito Camela", "p14.png", "Security"],
+["14", "Lia Grechi", "p15.png", "Teacher"],
+["15", "Davide Colombo ", "p12.png", "Chef"]
 ];
 
 $(document).ready(function(){
