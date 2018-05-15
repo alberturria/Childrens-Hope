@@ -34,7 +34,7 @@ var people = [
 ["9", "Lucca Colombetti"],
 ["10", "Giovanni Grieco"],
 ["11", "Angelina Marinazzo"],
-["12", "Franchesca Romanatti"],
+["12", "Franchesca Roman"],
 ["13", "Benito Camela"],
 ["14", "Lia Grechi"],
 ["15", "Davide Colombo"]
