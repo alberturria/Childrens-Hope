@@ -8,6 +8,38 @@ var services = [
 ["Playroom", "../assests/img/playroom.jpg", "Are you tired of common health care centers? Give an opportunity to our centers. The schedule counts with breaks every 2 hours in order to relax and enjoy with the rest of the children in our partyrooms. You will develop your social abilities playing and meeting other children of our center"],
 ["Education", "../assests/img/education.jpg", "Do you need help with some academic skills? This is your place. In our centers you will find personalized help in every school topic, going from maths to language. We assure you a considerable improvement in the academic aspect"]
 ];
+
+
+var relation = [
+["4","11","6"], // Canteen
+["4","15","11"],  // Cafe
+["13","4"],  // Parking
+["8","7","9","12","3"],  // Rehabilitation
+["10","1","0"],  // Playroom
+["14","10","1", "5","2"] // Education
+	
+];
+
+var people = [
+// id     Name
+["0", "Maurizia Jhonson"],
+["1", "Pietro Baldi"],
+["2", "Lamberta Pérez"],
+["3", "Nadia Ferrari"],
+["4", "Yuri Esposito"],
+["5", "Isabella Ricci"],
+["6", "Linda Romano"],
+["7", "Antonella Greco"],
+["8", "Andrea Romanini"],
+["9", "Lucca Colombetti"],
+["10", "Giovanni Grieco"],
+["11", "Angelina Marinazzo"],
+["12", "Franchesca Romanatti"],
+["13", "Benito Camela"],
+["14", "Lia Grechi"],
+["15", "Davide Colombo"]
+];
+
 	
 $(document).ready(function(){
 	loadServiceDescription(1);
