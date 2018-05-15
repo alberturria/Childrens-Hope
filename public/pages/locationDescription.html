@@ -13,12 +13,11 @@
     <link rel="stylesheet" href="../assests/css/templatemo-style.css">  <!-- Templatemo style -->
     <link rel="stylesheet" href="../assests/css/main.css">
     
-		<!-- load js -->
+	<!-- load JS files -->
 	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-	<script type="text/javascript" src="../assests/js/locationIndex.js"></script>
-
-
-
+	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+	<script type="text/javascript" src="../assests/js/locationDescription.js"></script>
 </head>
 <body>
 	<div class="tm-header">
@@ -62,17 +61,12 @@
 			<p class="tm-margin-b-30 blackText" id="locationDescription">
 			</p>  
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-12">
-			<div class="tm-gold-text  locationTittle leftPadding">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div style="margin-left: 15px;" class="tm-gold-text locationTittle">
 				Services
 			</div>
-			<div class="" id="location-links">
-				<li><a href="serviceDescription.html?service=Canteen">Canteen</a></li>
-				<li><a href="serviceDescription.html?service=Cafe">Cafe</a></li>
-				<li><a href="serviceDescription.html?service=Parking">Parking</a></li>
-				<li><a href="serviceDescription.html?service=Rehabilitation">Rehabilitation</a></li>
-				<li><a href="serviceDescription.html?service=Playroom">Playroom</a></li>
-				<li><a href="serviceDescription.html?service=Education">Education</a></li>
+			<div id="locationLinks">
+				
 			</div>
 		</div>
 	</section>
@@ -91,9 +85,5 @@
 			</div>
 		</div>
 	</footer>
-	<!-- load JS files -->
-	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
-	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
 </body>
 </html>
