@@ -5,18 +5,18 @@ var people = [
 ["1", "Pietro Baldi", "pietroBaldi.jpeg", "Counselor"],
 ["2", "Lamberta Pérez", "lambertaPerez.jpeg", "Lawyer"],
 ["3", "Nadia Ferrari", "nadiaFerrari.jpg", "Psychiatrist"],
-["4", "Yuri Esposito", "p5.png", "Security"],
-["5", "Isabella Ricci", "p6.png", "Teacher"],
-["6", "Linda Romano", "p7.png", "Waiter"],
-["7", "Antonella Greco", "p8.png", "Physiotherapist"],
-["8", "Andrea Romanini", "p9.png", "Nurse"],
-["9", "Lucca Colombetti", "p10.png", "Administrative"],
-["10", "Giovanni Grieco", "p11.png", "Carer"],
-["11", "Angelina Marinazzo", "p12.png", "Waiter"],
-["12", "Franchesca Romanatti", "p13.png", "Doctor"],
-["13", "Benito Camela", "p14.png", "Security"],
-["14", "Lia Grechi", "p15.png", "Teacher"],
-["15", "Davide Colombo ", "p12.png", "Chef"]
+["4", "Yuri Esposito", "yuriEsposito.jpeg", "Security"],
+["5", "Isabella Ricci", "isabella.jpg", "Teacher"],
+["6", "Linda Romano", "lindaRomano.png", "Waitress"],
+["7", "Antonella Greco", "antonella.jpg", "Physiotherapist"],
+["8", "Andrea Romanini", "andreaRomanini.jpg", "Nurse"],
+["9", "Lucca Colombetti", "luccaColombetti.jpg", "Administrative"],
+["10", "Giovanni Grieco", "giovanniGrieco.jpeg", "Carer"],
+["11", "Angelo Marinazzo", "angelo.jpg", "Waiter"],
+["12", "Francesca Roman", "fRoman.jpeg", "Doctor"],
+["13", "Benito Camela", "benitoCamela.jpg", "Security"],
+["14", "Lia Grechi", "liaGrechi.png", "Teacher"],
+["15", "Davide Colombo", "davideColombo.jpeg", "Chef"]
 ];
 
 $(document).ready(function(){

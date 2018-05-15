@@ -7,16 +7,16 @@ var people = [
 ["3", "Nadia Ferrari", "nadiaFerrari.jpg", "Psychiatrist","I studied medicine in 'Universidad de Granada'", "nFerrari@csHope.com"],
 ["4", "Yuri Esposito", "yuriEsposito.jpeg", "Security", "My dream has always been to defend the weak", "yEsposito@hotmail.com"],
 ["5", "Isabella Ricci", "isabella.jpg", "Teacher", "I want everyone to have access to education", "iRicci@csHope.com"],
-["6", "Linda Romano", "p7.png", "Waiter", "I want to help the disadvantaged", "lRomano@csHope.com"],
-["7", "Antonella Greco", "p8.png", "Physiotherapist", "My dream is to help everyone", "aGreco@csHope.com"],
-["8", "Andrea Romanini", "p9.png", "Nurse", "Anything to see a smile", "aRomanini@csHope.com"],
-["9", "Lucca Colombetti", "p10.png", "Administrative", "My passion is the paperwork", "lColombetti@csHope.com"],
-["10", "Giovanni Grieco", "p11.png", "Carer", "The laugh is the best medicine", "gGrieco@csHope.com"],
-["11", "Angelina Marinazzo", "p12.png", "Waiter", "I want everyone to have the same opportunities", "aFerrari@csHope.com"],
-["12", "Franchesca Romanatti", "p13.png", "Doctor", "Healing the world", "fRomanatti@csHope.com"],
+["6", "Linda Romano", "lindaRomano.png", "Waitress", "I want to help the disadvantaged", "lRomano@csHope.com"],
+["7", "Antonella Greco", "antonella.jpg", "Physiotherapist", "My dream is to help everyone", "aGreco@csHope.com"],
+["8", "Andrea Romanini", "andreaRomanini.jpg", "Nurse", "Anything to see a smile", "aRomanini@csHope.com"],
+["9", "Lucca Colombetti", "luccaColombetti.jpg", "Administrative", "My passion is the paperwork", "lColombetti@csHope.com"],
+["10", "Giovanni Grieco", "giovanniGrieco.jpeg", "Carer", "The laugh is the best medicine", "gGrieco@csHope.com"],
+["11", "Angelo Marinazzo", "angelo.jpg", "Waiter", "I want everyone to have the same opportunities", "aFerrari@csHope.com"],
+["12", "Francesca Roman", "fRoman.jpeg", "Doctor", "Healing the world", "fRomanatti@csHope.com"],
 ["13", "Benito Camela", "benitoCamela.jpg", "Security", "Always defending the weak", "bCamela@csHope.com"],
-["14", "Lia Grechi", "p15.png", "Teacher", "My dream is to teach everyone", "lGrechi@csHope.com"],
-["15", "Davide Colombo ", "p12.png", "Chef", "Cooking for future hopes", "dColombo@csHope.com"]
+["14", "Lia Grechi", "liaGrechi.png", "Teacher", "My dream is to teach everyone", "lGrechi@csHope.com"],
+["15", "Davide Colombo ", "davideColombo.jpeg", "Chef", "Cooking for future hopes", "dColombo@csHope.com"]
 
 ];
 
