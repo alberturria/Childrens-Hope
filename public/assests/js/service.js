@@ -2,8 +2,8 @@
 var services = [
 // id         Name      image       description
 ["0", "Canteen", "../assests/img/canteen.jpg", "Take a rest in one of our relax places" ],
-["1", "Cafe", "../assests/img/cafe.jpg", "Do you need a coffe? Don't hesitate to try one of our cappucinos"],
-["2", "Parking", "../assests/img/parking.jpg", "Underground parking for those rainy days"],
+["1", "Cafe", "../assests/img/cafe.jpg", "Do you need a break? Come and try one of our caffes!"],
+["2", "Parking", "../assests/img/parking.jpg", "We have a service of underground parking for park your vehicle those rainy days"],
 ["3", "Rehabilitation", "../assests/img/rehabilitation.jpg", "Enjoy a medical rehabilitation in our centers"],
 ["4", "Playroom", "../assests/img/playroom.jpg", "The little ones will have fun with different games"],
 ["5", "Education", "../assests/img/education.jpg", "Invest in the education of your children"]
