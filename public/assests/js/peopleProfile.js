@@ -17,7 +17,37 @@ var people = [
 ["13", "Benito Camela", "benitoCamela.jpg", "Security", "Always defending the weak", "bCamela@csHope.com"],
 ["14", "Lia Grechi", "liaGrechi.png", "Teacher", "My dream is to teach everyone", "lGrechi@csHope.com"],
 ["15", "Davide Colombo ", "davideColombo.jpeg", "Chef", "Cooking for future hopes", "dColombo@csHope.com"]
+];
 
+// Simulate the relation beetwen services and people
+var relationSP = [
+// idService //idPerson
+["4"], // 0
+["4", "5"], // 1
+["5"], // 2
+["3"], // 3
+["0", "1", "2"], // 4
+["5"], // 5
+["0"], // 6
+["3"], // 7
+["3"], // 8
+["3"], // 9
+["4","5"], // 10
+["0","1"], // 11
+["3"], // 12
+["2"], // 13
+["5"], // 14
+["1"] // 15
+];
+
+var services = [
+// id     Name
+["0", "Canteen"],
+["1", "Cafe"],
+["2", "Parking"],
+["3", "Rehabilitation"],
+["4", "Playroom"],
+["5", "Education"]
 ];
 
 $(document).ready(function(){
@@ -31,6 +61,13 @@ function loadPeoplePage(){
 	document.getElementById("description").innerText= people[id][4];
 	document.getElementById("contactPerson").innerHTML= "<h3><b>Contact: </b><br>"+ people[id][5]+"</h3>";
 	document.getElementById("rolePerson").innerHTML="<h3><b>Role: </b><br>"+ people[id][3]+"</h3>";
+	var servicesOffered="<h3><b>Service: </b><br><ul>";
+	var idsService=relationSP[id];
+	for(var i=0; i<idsService.length; i++){
+		servicesOffered+='<li><a href="serviceDescription.html?service='+services[idsService[i]][1]+'">'+services[idsService[i]][1]+'</a></li>';
+	}
+	servicesOffered+="</ul></h3>";
+	document.getElementById("contactPerson").innerHTML=servicesOffered;
 }
 
 function getQueryVariable() {
