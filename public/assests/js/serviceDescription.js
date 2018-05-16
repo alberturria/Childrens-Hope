@@ -9,15 +9,14 @@ var services = [
 ["Education", "../assests/img/education.jpg", "Do you need help with some academic skills? This is your place. In our centers you will find personalized help in every school topic, going from maths to language. We assure you a considerable improvement in the academic aspect"]
 ];
 
-
-var relation = [
+// Simulate the relation beetwen services and people
+var relationSP = [
 ["4","11","6"], // Canteen
 ["4","15","11"],  // Cafe
 ["13","4"],  // Parking
 ["8","7","9","12","3"],  // Rehabilitation
 ["10","1","0"],  // Playroom
 ["14","10","1", "5","2"] // Education
-	
 ];
 
 var people = [
@@ -40,6 +39,23 @@ var people = [
 ["15", "Davide Colombo"]
 ];
 
+// simulate the relation beetwen services and location
+var relationSL = [
+["0","2","3"], // Canteen
+["0","2","3"],  // Cafe
+["3"],  // Parking
+["0","3"],  // Rehabilitation
+["2","1","0"],  // Playroom
+["0","1"] // Education
+];
+
+var locations = [
+// Name   
+"Milano",
+"Bologna",
+"Naples",
+"Rome"
+];
 	
 $(document).ready(function(){
 	loadServiceDescription(1);
@@ -52,18 +68,47 @@ function getQueryVariable() {
 	return vars[1];
 }
 
-function loadServiceDescription(index){
-	document.getElementById("serviceTittle").innerHTML= getQueryVariable();
+function loadServiceDescription(){
+	var serviceName=getQueryVariable();
+	document.getElementById("serviceTittle").innerHTML= serviceName;
 	var current = services;
-	for(var i=0; i < services.length; i++)
-	{
-		if(getQueryVariable()==services[i][0])
-		{
+	for(var i=0; i < services.length; i++){
+		if(serviceName==services[i][0]){
 			document.getElementById("serviceDescription").innerHTML= services[i][2];   
 			document.getElementById("serviceImage").src=services[i][1];
 		}
 	}
+
+	if (serviceName=="Canteen"){
+		peopleWorking = relationSP[0];
+		locationOffered = relationSL[0];
+	}else if (serviceName=="Cafe"){
+		peopleWorking = relationSP[1];
+		locationOffered = relationSL[1];
+	}else if (serviceName=="Parking"){
+		peopleWorking = relationSP[2];
+		locationOffered = relationSL[2];
+	}else if (serviceName=="Rehabilitation"){
+		peopleWorking = relationSP[3];
+		locationOffered = relationSL[3];
+	}else if (serviceName=="Playroom"){
+		peopleWorking = relationSP[4];
+		locationOffered = relationSL[4];
+	}else{ // Education
+		peopleWorking = relationSP[5];
+		locationOffered = relationSL[5];
+	}
+	var peopleLinks="";
+	for (var i=0; i<peopleWorking.length; i++) {
+		peopleLinks+='<li><a href="peopleProfile.html?id='+people[peopleWorking[i]][0]+'">'+people[peopleWorking[i]][1]+'</a></li>';
+	}
+	
+	locationLinks="";
+	for (var i=0; i<locationOffered.length; i++) {
+		locationLinks+='<li><a href="locationDescription.html?location='+locations[locationOffered[i]]+'">'+locations[locationOffered[i]]+'</a></li>';
+	}
+
+	document.getElementById("peopleLinks").innerHTML=peopleLinks;
+	document.getElementById("locationLinks").innerHTML=locationLinks;
 }
-	
-	
 		

@@ -34,7 +34,7 @@ function serviceByLocation() {
 		locations = relation[2];
 	else if (document.getElementById("naples").checked)
 		locations = relation[3];
-	else
+	else // All
 		locations = ["0","1","2","3","4","5"];
 
 	for (var i=0; i<locations.length; i++) {
