@@ -67,7 +67,7 @@ function loadPeoplePage(){
 		servicesOffered+='<li><a href="serviceDescription.html?service='+services[idsService[i]][1]+'">'+services[idsService[i]][1]+'</a></li>';
 	}
 	servicesOffered+="</ul></h3>";
-	document.getElementById("contactPerson").innerHTML=servicesOffered;
+	document.getElementById("service").innerHTML=servicesOffered;
 }
 
 function getQueryVariable() {
