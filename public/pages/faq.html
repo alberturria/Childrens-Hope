@@ -8,8 +8,14 @@
 	<title>Children's Hope</title>
 	<!-- load stylesheets -->
 	<link rel="stylesheet" href="../assests/css/openSans.css">  <!-- Google web font "Open Sans" -->
-	<link rel="stylesheet" href="../assests/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-	<link rel="stylesheet" href="../assests/css/templatemo-style.css"> 
+	<link rel="stylesheet" href="../assests/css/bootstrap.min.css">   <!-- Bootstrap style -->
+	<link rel="stylesheet" href="../assests/css/templatemo-style.css">
+	<link rel="stylesheet" href="../assests/css/main.css">
+
+	<!-- load JS files -->
+	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
 </head>
 <body>
 	<div class="tm-header">
@@ -45,8 +51,106 @@
 		</div>
 	</div>
 	<br><br>
-	<center><h1>FAQ CONTENT</h1></center>
-	<!-- We don't have to develop this page-->
+	<div class="container">
+		<div class="panel-group " id="faqAccordion">
+			<div class="panel panel-default faqQuestion">
+				<div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+					<h4 class="panel-title">
+						<a href="#" class="faqHeader ing">Where are you?</a>
+					</h4>
+				</div>
+				<div id="question0" class="panel-collapse collapse" style="height: 0px;">
+					<div class="panel-body">
+						<p>We have several locations (you can find the locations in the locations section), but our main offices are in Milan</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default faqQuestion">
+				<div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
+					<h4 class="panel-title">
+						<a href="#" class="faqHeader ing">How can I help?</a>
+					</h4>
+				</div>
+				<div id="question1" class="panel-collapse collapse" style="height: 0px;">
+					<div class="panel-body">
+						<p>
+							We have a section dedicated to this, you can find it in the bottom of our page, clicking in the "Help Us" link, or contacting us to make some volunteering. Thank you very much!
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default faqQuestion">
+				<div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
+					<h4 class="panel-title">
+						<a href="#" class="faqHeader ing">Why do you need money if you are a non-profit organization?</a>
+					</h4>
+				</div>
+				<div id="question2" class="panel-collapse collapse" style="height: 0px;">
+					<div class="panel-body">
+						<p>
+							All the money donated is used to pay our employees, and to invest in new project like new centers, events, etc.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default faqQuestion">
+				<div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
+					<h4 class="panel-title">
+						<a href="#" class="faqHeader ing">How can i contact you?</a>
+					</h4>
+				</div>
+				<div id="question3" class="panel-collapse collapse" style="height: 0px;">
+					<div class="panel-body">
+						<p>
+							You can contact us through our "Contact Us" section (bottom of the page), or via email contact@csHope.com
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default faqQuestion">
+				<div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question4">
+					<h4 class="panel-title">
+						<a href="#" class="faqHeader ing">Do I have to pay to use your services?</a>
+					</h4>
+				</div>
+				<div id="question4" class="panel-collapse collapse" style="height: 0px;">
+					<div class="panel-body">
+						<p>
+							Some of our service are of payment, but most of our services are free, speacilly those which are relationed with the children. Anyways we strongly appreciate the donations.  
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default faqQuestion">
+				<div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question5">
+					<h4 class="panel-title">
+						<a href="#" class="faqHeader ing">Where can I find further information?</a>
+					</h4>
+				</div>
+				<div id="question5" class="panel-collapse collapse" style="height: 0px;">
+					<div class="panel-body">
+						<p>
+							You can find a lot of information in the several sections of our page, but if you need more information about some particular issue you can contact us and we will be happy to help you.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default faqQuestion">
+				<div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question6">
+					<h4 class="panel-title">
+						<a href="#" class="faqHeader ing">Do I need a reservation to go to the events?</a>
+					</h4>
+				</div>
+				<div id="question6" class="panel-collapse collapse" style="height: 0px;">
+					<div class="panel-body">
+						<p>
+							It is not strictly mandatory, but we strongly recommend you to do it, due to the organization of the event.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<footer class="tm-footer">
 		<div class="container-fluid">
 			<div class="row">
@@ -62,9 +166,5 @@
 			</div>
 		</div>
 	</footer>
-	<!-- load JS files -->
-	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
-	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
 </body>
 </html>

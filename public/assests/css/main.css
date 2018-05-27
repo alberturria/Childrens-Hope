@@ -263,3 +263,21 @@ textarea.form-control {
 	font-size: medium;
 	text-align: left;
 }
+
+/* FAQ style*/
+.faqQuestion {
+	margin-bottom: 20px;
+}
+
+.faqHeader:link{
+	color: #cc9900;
+}
+.faqHeader:hover{
+	color: #cc9900;
+}
+.faqHeader:active{
+	color: #cc9900;
+}
+.faqHeader:visited{
+	color: #cc9900;
+}
