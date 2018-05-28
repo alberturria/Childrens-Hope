@@ -1,0 +1,39 @@
+[ 
+  {
+    "id": 0,
+    "name": "Canteen",
+    "image": "../assests/img/canteen.jpg",
+    "description": "Take a rest in one of our relax places"
+  },
+  {
+    "id": 1,
+    "name": "Cafe",
+    "image": "../assests/img/cafe.jpg",
+    "description": "Do you need a break? Come and try one of our coffes!"
+  },
+  {
+    "id": 2,
+    "name": "Parking",
+    "image": "../assests/img/parking.jpg",
+    "description": "We have a service of underground parking for park your vehicle those rainy days"
+  },
+  {
+    "id": 3,
+    "name": "Rehabilitation",
+    "image": "../assests/img/rehabilitation.jpg",
+    "description": "Enjoy a medical rehabilitation in our centers"
+  },
+  {
+    "id": 4,
+    "name": "Playroom",
+    "image": "../assests/img/playroom.jpg",
+    "description": "The little ones will have fun with different games"
+  },
+  {
+    "id": 5,
+    "name": "Education",
+    "image": "../assests/img/education.jpg",
+    "description": "../assests/img/education.jpg", "Invest in the education of your children"
+  }
+]
+
