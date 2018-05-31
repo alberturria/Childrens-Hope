@@ -36,6 +36,7 @@ function loadEventDescription(){
 
 function addRow(event) {
 	document.getElementById("eventDescription").innerText= event.description;
-	//document.getElementById("eventImg").src="../assests/img/"+event.img;
-	document.getElementById("eventName").innerHTML=event.name;	
+	document.getElementById("eventImg").src="../assests/img/"+event.img;
+    document.getElementById("eventTittle").innerHTML=event.name;	
+    document.getElementById("eventDate").innerHTML=event.date;	
 }
