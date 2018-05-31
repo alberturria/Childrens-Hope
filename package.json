@@ -1,9 +1,9 @@
 {
-  "name": "polimi-hyp-2017-boilerplate",
+  "name": "polimihyp2018team10623424",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://polimi-hyp-2017-10173412@bitbucket.org/polimi-hyp-2017-10173412/polimi-hyp-2018-project.git",
-  "author": "Vittorio Zaccaria <vittorio.zaccaria@polimi.it>",
+  "repository": "git clone https://polimi-hyp-2018-10623424@bitbucket.org/polimihyp2018team10623424/polimi-hyp-2018-project.git",
+  "author": "Francisco Coca <francisco.coca@mail.polimi.it>, Alberto Herrera <alberto1.herrera@polimi.it>, Joaquín León <joaquin.leon@mail.polimi.it>",
   "engines": {
     "node": "7.5.0"
   },
@@ -17,6 +17,7 @@
     "sqlite3": "3.1.8"
   },
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "sc2": "node ./index2.js"
   }
 }
