@@ -71,16 +71,6 @@ app.get("/locations/:id", function(req, res) {
 	});
 });
 
-app.get("/locations/:id", function(req, res) {
-	let id = parseInt(req.params.id);
-	let myQuery = sqlDb("locations").where("id",id);
-
-	myQuery
-	.then(result => {
-		res.send(JSON.stringify(result));
-	});
-});
-
 app.set("port", serverPort);
 
 initSqlDB();
