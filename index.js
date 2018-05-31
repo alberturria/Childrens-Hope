@@ -17,7 +17,7 @@ function initSqlDB() {
 			useNullAsDefault: true
 		});
 	} else {
-		sqlDbLoc = sqlDbFactory({
+		sqlDb = sqlDbFactory({
 			debug: true,
 			client: "pg",
 			connection: process.env.DATABASE_URL,
@@ -100,11 +100,9 @@ app.get("/locations/:id", function(req, res) {
 });
 
 app.get("/events", function(req, res) {
-	let id = parseInt(req.params.id);
 	let myQuery = sqlDb("events");
 
 	myQuery
-	.pick(['id','img','name'])
 	.then(result => {
 		res.send(JSON.stringify(result));
 	});
