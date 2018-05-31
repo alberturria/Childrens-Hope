@@ -75,6 +75,32 @@ function initDb() {
 		});
 	}else
 		return false;
+
+	if (result){
+		result = sqlDb.schema.hasTable("news").then(exists => {
+			if (!exists) {
+				sqlDb.schema
+				.createTable("news", table => {
+					table.increments();
+					table.string("tittle");
+					table.string("body"),
+					table.string("img"),
+					table.date("date");
+				})
+				.then(() => {
+					return Promise.all(
+					_.map(newsList, p => {
+						delete p.id;
+						return sqlDb("news").insert(p);
+					})
+					);
+				});
+			} else {
+				return true;
+			}
+		});
+	}else
+		return false;
 }
 
 const _ = require("lodash");
@@ -83,6 +109,7 @@ let serverPort = process.env.PORT || 5000;
 
 let locationsList = require("./locationstoredata.json");
 let eventsList = require("./eventstoredata.json");
+let newsList = require("./newstoredata.json");
 
 app.use(express.static(__dirname + "/public"));
 
@@ -92,6 +119,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/locations/:id", function(req, res) {
 	let id = parseInt(req.params.id);
 	let myQuery = sqlDb("locations").where("id",id);
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/news", function(req, res) {
+	let myQuery = sqlDb("news");
 
 	myQuery
 	.then(result => {
