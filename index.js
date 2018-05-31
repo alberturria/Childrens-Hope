@@ -12,12 +12,12 @@ function initSqlDB() {
 			client: "sqlite3",
 			debug: true,
 			connection: {
-			filename: "./locationsdb.sqlite"
+			filename: "./childrensHopeDb.sqlite"
 			},
 			useNullAsDefault: true
 		});
 	} else {
-		sqlDb = sqlDbFactory({
+		sqlDbLoc = sqlDbFactory({
 			debug: true,
 			client: "pg",
 			connection: process.env.DATABASE_URL,
@@ -27,7 +27,8 @@ function initSqlDB() {
 }
 
 function initDb() {
-	return sqlDb.schema.hasTable("locations").then(exists => {
+	let result;
+	result = sqlDb.schema.hasTable("locations").then(exists => {
 		if (!exists) {
 			sqlDb.schema
 			.createTable("locations", table => {
@@ -48,6 +49,30 @@ function initDb() {
 			return true;
 		}
 	});
+
+	if (result){
+		result = sqlDb.schema.hasTable("events").then(exists => {
+			if (!exists) {
+				sqlDb.schema
+				.createTable("events", table => {
+					table.increments();
+					table.string("name");
+					table.string("description");
+				})
+				.then(() => {
+					return Promise.all(
+					_.map(eventsList, p => {
+						delete p.id;
+						return sqlDb("events").insert(p);
+					})
+					);
+				});
+			} else {
+				return true;
+			}
+		});
+	}else
+		return false;
 }
 
 const _ = require("lodash");
@@ -55,6 +80,7 @@ const _ = require("lodash");
 let serverPort = process.env.PORT || 5000;
 
 let locationsList = require("./locationstoredata.json");
+let eventsList = require("./eventstoredata.json");
 
 app.use(express.static(__dirname + "/public"));
 
@@ -64,6 +90,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/locations/:id", function(req, res) {
 	let id = parseInt(req.params.id);
 	let myQuery = sqlDb("locations").where("id",id);
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/events/:id", function(req, res) {
+	let id = parseInt(req.params.id);
+	let myQuery = sqlDb("events").where("id",id);
 
 	myQuery
 	.then(result => {

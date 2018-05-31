@@ -35,7 +35,6 @@ function loadlocationDescription(){
 			return response.json();
 		})
 		.then(function(data) {
-			console.log(data);
 			data.map(addRow);
 		});
 /*
