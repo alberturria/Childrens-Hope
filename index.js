@@ -57,7 +57,9 @@ function initDb() {
 				.createTable("events", table => {
 					table.increments();
 					table.string("name");
-					table.string("description");
+					table.string("description"),
+					table.string("img"),
+					table.date("date");
 				})
 				.then(() => {
 					return Promise.all(
@@ -92,6 +94,17 @@ app.get("/locations/:id", function(req, res) {
 	let myQuery = sqlDb("locations").where("id",id);
 
 	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/events", function(req, res) {
+	let id = parseInt(req.params.id);
+	let myQuery = sqlDb("events");
+
+	myQuery
+	.pick(['id','img','name'])
 	.then(result => {
 		res.send(JSON.stringify(result));
 	});
