@@ -5,6 +5,7 @@ const sqlDbFactory = require("knex");
 const process = require("process");
 
 let sqlDb;
+//prueba de ubuntu
 
 function initSqlDB() {
 	if (process.env.TEST) {
