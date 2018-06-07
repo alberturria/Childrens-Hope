@@ -5,7 +5,6 @@ const sqlDbFactory = require("knex");
 const process = require("process");
 
 let sqlDb;
-//prueba de ubuntu
 
 function initSqlDB() {
 	if (process.env.TEST) {
@@ -102,6 +101,33 @@ function initDb() {
 		});
 	}else
 		return false;
+
+	if (result){
+		result = sqlDb.schema.hasTable("people").then(exists => {
+			if (!exists) {
+				sqlDb.schema
+				.createTable("people", table => {
+					table.increments();
+					table.string("name");
+					table.string("email"),
+					table.string("description"),
+					table.string("role");
+					table.string("image");
+				})
+				.then(() => {
+					return Promise.all(
+					_.map(peopleList, p => {
+						delete p.id;
+						return sqlDb("people").insert(p);
+					})
+					);
+				});
+			} else {
+				return true;
+			}
+		});
+	}else
+		return false;
 }
 
 const _ = require("lodash");
@@ -111,6 +137,7 @@ let serverPort = process.env.PORT || 5000;
 let locationsList = require("./locationstoredata.json");
 let eventsList = require("./eventstoredata.json");
 let newsList = require("./newstoredata.json");
+let peopleList = require("./personstoredata.json")
 
 app.use(express.static(__dirname + "/public"));
 
@@ -129,6 +156,16 @@ app.get("/locations/:id", function(req, res) {
 
 app.get("/news", function(req, res) {
 	let myQuery = sqlDb("news");
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/people/:id"+1, function(req, res) {
+	let id = parseInt(req.params.id);
+	let myQuery = sqlDb("people").where("id",id);
 
 	myQuery
 	.then(result => {

@@ -52,7 +52,7 @@ function contentIndexSelected(number){
 	for (var i=(number-1)*6; i<personal.length && i<number*6; i++) {
 		var current=personal[i];
 		result+='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6"><div class="tm-content-box tm-margin-b-40">'+
-		'<a href="peopleProfile.html?id='+current[0]+'"><div class="photoPersonal" style="background-image: url('+"'../assests/img/people/"+current[2]+"')"+'"></div>'+
+		'<a href="peopleProfile.html?people='+current[0]+'"><div class="photoPersonal" style="background-image: url('+"'../assests/img/people/"+current[2]+"')"+'"></div>'+
 		'<h4 class="tm-gold-text">'+current[1]+'</h4>'+
 		'<p style="color: grey;">'+current[3]+'</p></a></div></div>';
 	}

@@ -54,13 +54,31 @@ $(document).ready(function(){
 	loadPeoplePage();
 });
 
+
+function getQueryVariable() {
+	var query = document.URL;
+	var vars = query.split("=");
+	return vars[1];
+}
+
 function loadPeoplePage(){
-	var id = getQueryVariable();
+	var id  = getQueryVariable();
+
+
+		fetch(`/people/${id+1}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(addRow);
+		});
+	/*
 	document.getElementById("profilePicture").src = "../assests/img/people/"+people[id][2];
 	document.getElementById("namePerson").innerText= people[id][1];
 	document.getElementById("description").innerText= people[id][4];
 	document.getElementById("contactPerson").innerHTML= "<h3><b>Contact: </b><br>"+ people[id][5]+"</h3>";
 	document.getElementById("rolePerson").innerHTML="<h3><b>Role: </b><br>"+ people[id][3]+"</h3>";
+	*/
 	var servicesOffered="<h3><b>Service: </b><br><ul>";
 	var idsService=relationSP[id];
 	for(var i=0; i<idsService.length; i++){
@@ -68,10 +86,23 @@ function loadPeoplePage(){
 	}
 	servicesOffered+="</ul></h3>";
 	document.getElementById("service").innerHTML=servicesOffered;
+	
 }
 
-function getQueryVariable() {
-	var query = document.URL;
-	var vars = query.split("=");
-	return vars[1];
+function addRow(people) {
+	document.getElementById("description").innerText= people.description;
+	document.getElementById("profilePicture").src="../assests/img/people/"+people.image;
+	document.getElementById("namePerson").innerHTML=people.name;
+	document.getElementById("rolePerson").innerHTML=people.role;
+	document.getElementById("contactPerson").innerHTML=people.email;
+	
+
+	//var result="<ul>";
+/*	for(var i=0; i<citySer.length; i++)
+		result+='<li><a href="serviceDescription.html?service='+services[citySer[i]][1]+'">'+services[citySer[i]][1]+'</a></li>';	
+	result+="</ul>";
+*/
+	//document.getElementById("locationLinks").innerHTML=result;
 }
+
+

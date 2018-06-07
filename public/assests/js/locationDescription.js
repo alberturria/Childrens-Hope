@@ -30,6 +30,8 @@ function getQueryVariable() {
 function loadlocationDescription(){
 	var city = getQueryVariable();
 
+	
+
 	fetch(`/locations/${city}`)
 		.then(function(response) {
 			return response.json();
@@ -56,10 +58,10 @@ function addRow(location) {
 	document.getElementById("locationImg").src="../assests/img/"+location.img;
 	document.getElementById("locationTittle").innerHTML=location.name;
 
-	var result="<ul>";
+	//var result="<ul>";
 /*	for(var i=0; i<citySer.length; i++)
 		result+='<li><a href="serviceDescription.html?service='+services[citySer[i]][1]+'">'+services[citySer[i]][1]+'</a></li>';	
 	result+="</ul>";
 */
-	document.getElementById("locationLinks").innerHTML=result;
+	//document.getElementById("locationLinks").innerHTML=result;
 }
