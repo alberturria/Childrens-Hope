@@ -64,7 +64,6 @@ function getQueryVariable() {
 function loadPeoplePage(){
 	var id  = getQueryVariable();
 
-
 	fetch(`/people/${id}`)
 	.then(function(response) {
 		return response.json();
