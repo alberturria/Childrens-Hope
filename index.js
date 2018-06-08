@@ -180,6 +180,15 @@ app.get("/locations/:id", function(req, res) {
 	});
 });
 
+app.get("/locations", function(req, res) {
+	let myQuery = sqlDb("locations");
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
 app.get("/news", function(req, res) {
 	let myQuery = sqlDb("news");
 

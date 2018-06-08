@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 function loadLocations(){
 	document.getElementById("myLocations").innerHtml="";
-    console.log("A");
 	fetch(`/locations`)
 		.then(function(response) {
 			return response.json();

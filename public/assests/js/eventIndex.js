@@ -21,7 +21,7 @@ function addRow(events) {
 	result+='<div class="tm-content-box">'
 	result+='<a href="eventDescription.html?event='+events["id"]+'">';
 	result+='<img src="../assests/img/'+events["img"]+'" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">'
-		'<h4 class="textoIndice"><center>'+events["name"]+'</center></h4></a></div></div>';
+	result+='<h4 class="textoIndice"><center>'+events["name"]+'</center></h4></a></div></div>';
 
 	document.getElementById("myEvents").innerHTML+=result;
 }
