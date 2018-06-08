@@ -62,12 +62,36 @@ $(document).ready(function(){
 });
 
 
+
+
 function getQueryVariable() {
 	var query = document.URL;
 	var vars = query.split("=");
 	return vars[1];
 }
 
+
+function loadServiceDescription(){
+	var serviceId=getQueryVariable();
+
+
+	fetch(`/services/${serviceId}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(addRow);
+		});
+
+}
+
+function addRow(service) {
+	document.getElementById("serviceDescription").innerText= service.description;
+	document.getElementById("serviceImage").src=service.image;
+	document.getElementById("serviceTittle").innerHTML=service.name;
+
+}
+/*
 function loadServiceDescription(){
 	var serviceName=getQueryVariable();
 	document.getElementById("serviceTittle").innerHTML= serviceName;
@@ -110,5 +134,5 @@ function loadServiceDescription(){
 
 	document.getElementById("peopleLinks").innerHTML=peopleLinks;
 	document.getElementById("locationLinks").innerHTML=locationLinks;
-}
+}*/
 		
