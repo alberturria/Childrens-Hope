@@ -164,7 +164,7 @@ function initDb() {
 				})
 				.then(() => {
 					return Promise.all(
-					_.map(servicesList, p => {
+					_.map(placedList, p => {
 						delete p.id;
 						return sqlDb("placed").insert(p);
 					})
@@ -182,12 +182,12 @@ const _ = require("lodash");
 
 let serverPort = process.env.PORT || 5000;
 
-let locationsList = require("./locationstoredata.json");
-let eventsList = require("./eventstoredata.json");
-let newsList = require("./newstoredata.json");
-let peopleList = require("./personstoredata.json");
-let servicesList = require("./servicestoredata.json");
-let placedList = require("./placedstoredata.json");
+let locationsList = require("./storeData/locationstoredata.json");
+let eventsList = require("./storeData/eventstoredata.json");
+let newsList = require("./storeData/newstoredata.json");
+let peopleList = require("./storeData/personstoredata.json");
+let servicesList = require("./storeData/servicestoredata.json");
+let placedList = require("./storeData/placedstoredata.json");
 
 app.use(express.static(__dirname + "/public"));
 
