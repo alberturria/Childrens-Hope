@@ -128,6 +128,31 @@ function initDb() {
 		});
 	}else
 		return false;
+
+	if (result){
+		result = sqlDb.schema.hasTable("services").then(exists => {
+			if (!exists) {
+				sqlDb.schema
+				.createTable("services", table => {
+					table.increments();
+					table.string("name");
+					table.string("description"),
+					table.string("image");
+				})
+				.then(() => {
+					return Promise.all(
+					_.map(servicesList, p => {
+						delete p.id;
+						return sqlDb("services").insert(p);
+					})
+					);
+				});
+			} else {
+				return true;
+			}
+		});
+	}else
+		return false;
 }
 
 const _ = require("lodash");
@@ -138,6 +163,7 @@ let locationsList = require("./locationstoredata.json");
 let eventsList = require("./eventstoredata.json");
 let newsList = require("./newstoredata.json");
 let peopleList = require("./personstoredata.json")
+let servicesList = require("./servicestoredata.json");
 
 app.use(express.static(__dirname + "/public"));
 
@@ -156,6 +182,25 @@ app.get("/locations/:id", function(req, res) {
 
 app.get("/news", function(req, res) {
 	let myQuery = sqlDb("news");
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/services", function(req, res) {
+	let myQuery = sqlDb("services");
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/services/:id", function(req, res) {
+	let id = parseInt(req.params.id);
+	let myQuery = sqlDb("services").where("id",id);
 
 	myQuery
 	.then(result => {
