@@ -22,14 +22,11 @@ var people = [
 $(document).ready(function(){
 		fetch(`/people/numberPeople`)
 		.then(function(response) {
-			console.log(response);
 			return response.json();
 		})
 		.then(function(data) {
-			console.log(data);
 			loadPeoplePage(1, Math.ceil(data/6));
 		});
-		//loadPeoplePage(1,3)
 });
 
 function loadPeoplePage(index, nPages){
