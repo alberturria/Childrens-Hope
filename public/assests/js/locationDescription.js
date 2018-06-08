@@ -1,21 +1,3 @@
-// simulate the relation beetwen services and location
-var relation = [
-["0","1","3","4","5"], // Milano
-["4","5"],  // Bologna
-["0","1","4"],  // Rome
-["0","1","2","3"]  // Naples
-];
-
-var services = [
-// id     Name
-["0", "Canteen"],
-["1", "Cafe"],
-["2", "Parking"],
-["3", "Rehabilitation"],
-["4", "Playroom"],
-["5", "Education"]
-];
-
 $(document).ready(function(){
 	loadlocationDescription();
 });
@@ -39,18 +21,30 @@ function loadlocationDescription(){
 		.then(function(data) {
 			data.map(addRow);
 		});
-/*
-	citySer=relation[city];
-	document.getElementById("locationDescription").innerText= locations[city][2];
-	document.getElementById("locationImg").src=locations[city][1];
 
-	var result="<ul>";
-	for(var i=0; i<citySer.length; i++)
-		result+='<li><a href="serviceDescription.html?service='+services[citySer[i]][1]+'">'+services[citySer[i]][1]+'</a></li>';	
-	result+="</ul>";
-
-	document.getElementById("locationLinks").innerHTML=result;*/
+	fetch(`/placed/location/${city}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(writeServices);
+		});
 }
+
+function loadPlaced(){
+	var city = getQueryVariable();
+
+	
+
+	fetch(`/placeds/${city}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(addRow);
+		});
+}
+
 
 
 function addRow(location) {
@@ -58,10 +52,15 @@ function addRow(location) {
 	document.getElementById("locationImg").src="../assests/img/"+location.img;
 	document.getElementById("locationTittle").innerHTML=location.name;
 
-	//var result="<ul>";
-/*	for(var i=0; i<citySer.length; i++)
-		result+='<li><a href="serviceDescription.html?service='+services[citySer[i]][1]+'">'+services[citySer[i]][1]+'</a></li>';	
-	result+="</ul>";
-*/
-	//document.getElementById("locationLinks").innerHTML=result;
+}
+
+function writeServices(idl){
+	fetch(`/services/${idl.id_s}`)
+		.then(function(response) {
+			console.log(response);
+			return response.json();
+		})
+		.then(function(service) {
+			document.getElementById("serviceLinks").innerHTML+='<li><a href="serviceDescription.html?service='+service[0].id+'">'+service[0].name+'</a></li>';
+		});
 }
