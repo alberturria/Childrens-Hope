@@ -163,7 +163,7 @@ app.get("/news", function(req, res) {
 	});
 });
 
-app.get("/people/:id"+1, function(req, res) {
+app.get("/people/:id", function(req, res) {
 	let id = parseInt(req.params.id);
 	let myQuery = sqlDb("people").where("id",id);
 

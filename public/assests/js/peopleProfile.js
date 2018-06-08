@@ -65,7 +65,7 @@ function loadPeoplePage(){
 	var id  = getQueryVariable();
 
 
-		fetch(`/people/${id+1}`)
+		fetch(`/people/${id}`)
 		.then(function(response) {
 			return response.json();
 		})
@@ -90,11 +90,11 @@ function loadPeoplePage(){
 }
 
 function addRow(people) {
-	document.getElementById("description").innerText= people.description;
 	document.getElementById("profilePicture").src="../assests/img/people/"+people.image;
+	document.getElementById("description").innerText= people.description;
 	document.getElementById("namePerson").innerHTML=people.name;
-	document.getElementById("rolePerson").innerHTML=people.role;
-	document.getElementById("contactPerson").innerHTML=people.email;
+	document.getElementById("rolePerson").innerText=people.role;
+	document.getElementById("contactPerson").innerText=people.email;
 	
 
 	//var result="<ul>";
