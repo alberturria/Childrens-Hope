@@ -20,13 +20,19 @@ var people = [
 ];
 
 $(document).ready(function(){
-	loadPeoplePage(1);
+		fetch(`/people/numberPeople`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			loadPeoplePage(1, Math.ceil(data/6));
+		});
 });
 
-function loadPeoplePage(index){
-	document.getElementById("indexPeopleContent").innerHTML=contentIndexSelected(index);
+function loadPeoplePage(index, nPages){
+	contentIndexSelected(index);
 
-	document.getElementById("indexPeopleNumber").innerHTML=chooseIndexSelected(index, Math.ceil(people.length/6));
+	document.getElementById("indexPeopleNumber").innerHTML=chooseIndexSelected(index, nPages);
 }
 
 function chooseIndexSelected(number, nPages){
@@ -39,23 +45,27 @@ function chooseIndexSelected(number, nPages){
 		else
 			result += 'class="normalIndex"';
 
-		result += ' href="#indexPeopleContent" onclick="loadPeoplePage('+i+');">'+i+'</a>';
+		result += ' href="#indexPeopleContent" onclick="loadPeoplePage('+i+','+nPages+');">'+i+'</a>';
 	}
 
 	return result;
 }
 
 function contentIndexSelected(number){
-	var personal = people;
-	var result="";
+	document.getElementById("indexPeopleContent").innerHTML="";
 	
-	for (var i=(number-1)*6; i<personal.length && i<number*6; i++) {
-		var current=personal[i];
-		result+='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6"><div class="tm-content-box tm-margin-b-40">'+
-		'<a href="peopleProfile.html?people='+current[0]+'"><div class="photoPersonal" style="background-image: url('+"'../assests/img/people/"+current[2]+"')"+'"></div>'+
-		'<h4 class="tm-gold-text">'+current[1]+'</h4>'+
-		'<p style="color: grey;">'+current[3]+'</p></a></div></div>';
-	}
+	fetch(`/people/start/${(number-1)*6}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(fillPerson);
+		});
+}
 
-	return result;
+function fillPerson(person){
+	document.getElementById("indexPeopleContent").innerHTML+='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6"><div class="tm-content-box tm-margin-b-40">'+
+	'<a href="peopleProfile.html?people='+person.id+'"><div class="photoPersonal" style="background-image: url('+"'../assests/img/people/"+person.image+"')"+'"></div>'+
+	'<h4 class="tm-gold-text">'+person.name+'</h4>'+
+	'<p style="color: grey;">'+person.role+'</p></a></div></div>';
 }

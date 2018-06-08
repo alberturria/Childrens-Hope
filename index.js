@@ -241,6 +241,28 @@ app.get("/services/:id", function(req, res) {
 	});
 });
 
+app.get("/people/start/:idStart", function(req, res) {
+	let idStart = parseInt(req.params.idStart);
+	let start = parseInt(_.get(req, "query.start", idStart));
+	let limit = parseInt(_.get(req, "query.limit", 6));		
+	let myQuery = sqlDb("people");
+
+	myQuery
+		.limit(limit)
+		.offset(start)
+		.then(result => {
+			res.send(JSON.stringify(result));
+		});
+});
+app.get("/people/numberPeople", function(req, res) {
+	let myQuery = sqlDb("people");
+	
+
+	myQuery
+	.then(result => {
+		res.send((JSON.stringify(result.length)));
+	});
+});
 app.get("/people/:id", function(req, res) {
 	let id = parseInt(req.params.id);
 	let myQuery = sqlDb("people").where("id",id);

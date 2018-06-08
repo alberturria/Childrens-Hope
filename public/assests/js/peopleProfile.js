@@ -1,4 +1,4 @@
-// variable to simulate we're receiving the data from a database
+/*// variable to simulate we're receiving the data from a database
 var people = [
 // ID        Name            image                role            description           contact
 ["0", "Maurizia Jhonson", "mauriziaJhonson.jpeg", "Assistant", "I studied Bussines & Managment in 'Università degli studi di Milano'", "MJhonson@csHope.com"],
@@ -17,7 +17,7 @@ var people = [
 ["13", "Benito Camela", "benitoCamela.jpg", "Security", "Always defending the weak", "bCamela@csHope.com"],
 ["14", "Lia Grechi", "liaGrechi.png", "Teacher", "My dream is to teach everyone", "lGrechi@csHope.com"],
 ["15", "Davide Colombo ", "davideColombo.jpeg", "Chef", "Cooking for future hopes", "dColombo@csHope.com"]
-];
+];*/
 
 // Simulate the relation beetwen services and people
 var relationSP = [
@@ -64,14 +64,13 @@ function getQueryVariable() {
 function loadPeoplePage(){
 	var id  = getQueryVariable();
 
-
-		fetch(`/people/${id}`)
-		.then(function(response) {
-			return response.json();
-		})
-		.then(function(data) {
-			data.map(addRow);
-		});
+	fetch(`/people/${id}`)
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		data.map(addBasicData);
+	});
 	/*
 	document.getElementById("profilePicture").src = "../assests/img/people/"+people[id][2];
 	document.getElementById("namePerson").innerText= people[id][1];
@@ -89,12 +88,12 @@ function loadPeoplePage(){
 	
 }
 
-function addRow(people) {
+function addBasicData(people) {
 	document.getElementById("profilePicture").src="../assests/img/people/"+people.image;
 	document.getElementById("description").innerText= people.description;
-	document.getElementById("namePerson").innerHTML=people.name;
-	document.getElementById("rolePerson").innerText=people.role;
-	document.getElementById("contactPerson").innerText=people.email;
+	document.getElementById("namePerson").innerText=people.name;
+	document.getElementById("rolePerson").innerHTML="<h3><b>Role: </b><br>"+ people.role+"</h3>";
+	document.getElementById("contactPerson").innerHTML="<h3><b>Contact: </b><br>"+people.email+"</h3>";
 	
 
 	//var result="<ul>";
