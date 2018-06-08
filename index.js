@@ -208,6 +208,15 @@ app.get("/services/:id", function(req, res) {
 	});
 });
 
+app.get("/people", function(req, res) {
+	let myQuery = sqlDb("people");
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
 app.get("/people/:id", function(req, res) {
 	let id = parseInt(req.params.id);
 	let myQuery = sqlDb("people").where("id",id);
