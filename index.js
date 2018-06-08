@@ -153,6 +153,29 @@ function initDb() {
 		});
 	}else
 		return false;
+
+	if (result){
+		result = sqlDb.schema.hasTable("placed").then(exists => {
+			if (!exists) {
+				sqlDb.schema
+				.createTable("placed", table => {
+					table.string("id_s");
+					table.string("id_l");
+				})
+				.then(() => {
+					return Promise.all(
+					_.map(servicesList, p => {
+						delete p.id;
+						return sqlDb("placed").insert(p);
+					})
+					);
+				});
+			} else {
+				return true;
+			}
+		});
+	}else
+		return false;
 }
 
 const _ = require("lodash");
@@ -162,8 +185,9 @@ let serverPort = process.env.PORT || 5000;
 let locationsList = require("./locationstoredata.json");
 let eventsList = require("./eventstoredata.json");
 let newsList = require("./newstoredata.json");
-let peopleList = require("./personstoredata.json")
+let peopleList = require("./personstoredata.json");
 let servicesList = require("./servicestoredata.json");
+let placedList = require("./placedstoredata.json");
 
 app.use(express.static(__dirname + "/public"));
 
@@ -239,6 +263,26 @@ app.get("/events", function(req, res) {
 app.get("/events/:id", function(req, res) {
 	let id = parseInt(req.params.id);
 	let myQuery = sqlDb("events").where("id",id);
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/placed/location/:id_l", function(req, res) {
+	let id_l = parseInt(req.params.id_l);
+	let myQuery = sqlDb("placed").where("id_l",id_l);
+
+	myQuery
+	.then(result => {
+		res.send(JSON.stringify(result));
+	});
+});
+
+app.get("/placed/service/:id_s", function(req, res) {
+	let id_s = parseInt(req.params.id_s);
+	let myQuery = sqlDb("placed").where("id_s",id_s);
 
 	myQuery
 	.then(result => {
