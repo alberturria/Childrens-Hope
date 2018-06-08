@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Children's Hope</title>
+	<!-- load JS files -->
+	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+	<script src="../assests/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../assests/js/locationIndex.js"></script>
+
 
 	<!-- load stylesheets -->
 	<link rel="stylesheet" href="../assests/css/openSans.css">  <!-- Google web font "Open Sans" -->
@@ -47,44 +53,14 @@
 			</div>
 		</div>
 	</div>
+
 	<section class="tm-section">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-content-box">
-						<a href="locationDescription.html?location=1">
-							<img src="../assests/img/milan.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Milan</center></h4>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-content-box">
-						<a href="locationDescription.html?location=2">
-							<img src="../assests/img/bologna.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Bologna</center></h4>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-content-box">
-						<a href="locationDescription.html?location=3">
-							<img src="../assests/img/naples.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Naples</center></h4>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-					<div class="tm-content-box">
-						<a href="locationDescription.html?location=4">
-							<img src="../assests/img/rome.jpg" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">
-							<h4 class="textoIndice"><center>Rome</center></h4>
-						</a>
-					</div>
-				</div>
-			</div> <!-- row -->
+			<div class="row" id="myLocations">
+			</div>
 		</div>
 	</section>
+
 	<footer class="tm-footer">
 		<div class="container-fluid">
 			<div class="row">
@@ -100,10 +76,6 @@
 			</div>
 		</div>
 	</footer>
-	<!-- load JS files -->
-	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
-	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
-
+	
 </body>
 </html>
