@@ -18,11 +18,42 @@ var relation = [
 ];
 
 $(document).ready(function(){
-	serviceByLocation();
+	loadServices();
 });
 
 
-function serviceByLocation() {
+
+function loadServices(){
+	document.getElementById("services").innerHtml="";
+
+	fetch(`/services`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(addRow);
+		});
+
+}
+
+function addRow(services) {
+	let result="";
+	result += '<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">'+
+			'<div class="tm-margin-b-30 tm-content-box">'+
+				'<a href="serviceDescription.html?service='+services["id"]+'">'+
+					'<img src="'+services["image"]+'" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">'+
+					'<h4 class="textoIndice"><center>'+services["name"]+'</center></h4>'+
+				'</a>'+
+				'<p>'+services["description"]+'</p>'+
+			'</div>'+
+		'</div>';
+   
+	document.getElementById("services").innerHTML+=result;
+}
+
+
+
+/*function serviceByLocation() {
 	var result="";
 	var locations;
 
@@ -52,3 +83,4 @@ function serviceByLocation() {
 
 	document.getElementById("services").innerHTML= result;
 }
+*/
