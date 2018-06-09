@@ -69,7 +69,6 @@ function fillPersonData(ids){
 			return response.json();
 		})
 		.then(function(people) {
-			//console.log(people);
 			document.getElementById("peopleLinks").innerHTML+='<li><a href="peopleProfile.html?people='+people[0].id+'">'+people[0].name+'</a></li>';
 		});
 }

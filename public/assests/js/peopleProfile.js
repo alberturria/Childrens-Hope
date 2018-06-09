@@ -71,6 +71,14 @@ function loadPeoplePage(){
 	.then(function(data) {
 		data.map(addBasicData);
 	});
+
+	fetch(`/participates/person/${id}`)
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+	data.map(fillServiceData);
+	});
 	/*
 	document.getElementById("profilePicture").src = "../assests/img/people/"+people[id][2];
 	document.getElementById("namePerson").innerText= people[id][1];
@@ -78,6 +86,7 @@ function loadPeoplePage(){
 	document.getElementById("contactPerson").innerHTML= "<h3><b>Contact: </b><br>"+ people[id][5]+"</h3>";
 	document.getElementById("rolePerson").innerHTML="<h3><b>Role: </b><br>"+ people[id][3]+"</h3>";
 	*/
+	/*
 	var servicesOffered="<h3><b>Service: </b><br><ul>";
 	var idsService=relationSP[id];
 	for(var i=0; i<idsService.length; i++){
@@ -85,6 +94,7 @@ function loadPeoplePage(){
 	}
 	servicesOffered+="</ul></h3>";
 	document.getElementById("service").innerHTML=servicesOffered;
+	*/
 	
 }
 
@@ -102,6 +112,16 @@ function addBasicData(people) {
 	result+="</ul>";
 */
 	//document.getElementById("locationLinks").innerHTML=result;
+}
+
+function fillServiceData(ids){
+	fetch(`/services/${ids.id_s}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(services) {
+			document.getElementById("service").innerHTML+='<li><a href="serviceDescription.html?service='+services[0].id+'">'+services[0].name+'</a></li>';
+		});
 }
 
 
