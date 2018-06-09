@@ -36,7 +36,16 @@ function loadServiceDescription(){
 		.then(function(data) {
 			data.map(fillServiceData);
 		});
+
+	fetch(`/participates/service/${serviceId}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(fillPersonData);
+		});
 }
+
 
 function fillBasicData(service) {
 	document.getElementById("serviceDescription").innerText= service.description;
@@ -51,5 +60,16 @@ function fillServiceData(ids){
 		})
 		.then(function(location) {
 			document.getElementById("locationLinks").innerHTML+='<li><a href="locationDescription.html?location='+location[0].id+'">'+location[0].name+'</a></li>';
+		});
+}
+
+function fillPersonData(ids){
+	fetch(`/people/${ids.id_p}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(people) {
+			//console.log(people);
+			document.getElementById("peopleLinks").innerHTML+='<li><a href="peopleProfile.html?people='+people[0].id+'">'+people[0].name+'</a></li>';
 		});
 }
