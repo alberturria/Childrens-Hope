@@ -20,14 +20,14 @@ function addRow(news) {
 	result += '<div class="wrapNew col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">';
 	result += '<img class="imageNew" src="../assests/img/'+news["img"]+'">';
     result += '<div class="contentNew">';
-    result += '<div class="contentNew dateNew">';
+    result += '<div class="dateNew">';
     result += convertDateFormat(news["date"]);
     result += '</div>';
-    result += '<div class="contentNew titleNew">';
+    result += '<div class="titleNew">';
     result += news["tittle"];
-    result += '<div class="contentNew bodyNew">';
+    result += '</div><div class="bodyNew">';
     result += news["body"];
-    result += '</div></div></div>';
+    result += '</div></div>';
    
 	document.getElementById("myNews").innerHTML+=result;
 }
