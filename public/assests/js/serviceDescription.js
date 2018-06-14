@@ -1,13 +1,3 @@
-// Simulate the relation beetwen services and people
-var relationSP = [
-["4","11","6"], // Canteen
-["4","15","11"],  // Cafe
-["13","4"],  // Parking
-["8","7","9","12","3"],  // Rehabilitation
-["10","1","0"],  // Playroom
-["14","10","1", "5","2"] // Education
-];
-	
 $(document).ready(function(){
 	loadServiceDescription();
 });
