@@ -11,6 +11,12 @@
 	<link rel="stylesheet" href="../assests/css/openSans.css">  <!-- Google web font "Open Sans" -->
 	<link rel="stylesheet" href="../assests/css/bootstrap.min.css">  <!-- Bootstrap style -->
 	<link rel="stylesheet" href="../assests/css/templatemo-style.css">  <!-- Templatemo style -->
+
+	<!-- load JS files -->
+	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+	<script src="../assests/js/helpUs.js"></script>
 </head>
 <body>
 	<div class="tm-header">
@@ -50,23 +56,19 @@
 	<div style="margin-bottom: 20%">
 		<section id="donation-container">
 			<div class="container">
-				<center><form id="contactForm">
-					
-						<div class="form-group">
-							<label for="nameContact">Your name</label>
-							<input type="text" class="form-control" id="nameContact" placeholder=" Enter Name">
-						</div>
-						<div class="form-group">
-							<label for="emailContact">Your donation</label>
-							<input type="donation"  class="form-control" id="emailContact" placeholder=" 100">
-						</div>	
-						<div class="form-group">
-							<button type="button" class="btn btn-default submit" onclick="sendMessage();"> Donate </button>
-						</div>	
-						
-					
-					
-				</form></center>
+				<form id="donationForm">
+					<div class="form-group">
+						<label for="nameContact">Your name</label>
+						<input type="text" class="form-control" id="nameContact" onchange="checkWrite();" placeholder="Enter Name">
+					</div>
+					<div class="form-group">
+						<label for="quantity">Your donation</label>
+						<input type="number" class="form-control" onchange="checkWrite();" id="quantity">
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-default submit" onclick="sendDonation();" id="donateButton" disabled="false"> Donate </button>
+					</div>	
+				</form>
 			</div>
 		</section>
 	</div>
@@ -85,9 +87,5 @@
 			</div>
 		</div>
 	</footer>
-	<!-- load JS files -->
-	<script src="../assests/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-	<script src="../assests/js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
-	<script src="../assests/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
 </body>
 </html>
