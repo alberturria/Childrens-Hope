@@ -270,6 +270,7 @@ app.get("/people/start/:idStart", function(req, res) {
 	let start = parseInt(_.get(req, "query.start", idStart));
 	let limit = parseInt(_.get(req, "query.limit", 6));		
 	let myQuery = sqlDb("people");
+	myQuery = myQuery.orderBy("name","asc");
 
 	myQuery
 		.limit(limit)

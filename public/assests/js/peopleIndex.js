@@ -1,23 +1,4 @@
-// variable to simulate we're receiving the data from a database
-var people = [
-// ID      Name                  image               role
-["0", "Maurizia Jhonson", "mauriziaJhonson.jpeg", "Assistant"],
-["1", "Pietro Baldi", "pietroBaldi.jpeg", "Counselor"],
-["2", "Lamberta Pérez", "lambertaPerez.jpeg", "Lawyer"],
-["3", "Nadia Ferrari", "nadiaFerrari.jpg", "Psychiatrist"],
-["4", "Yuri Esposito", "yuriEsposito.jpeg", "Security"],
-["5", "Isabella Ricci", "isabella.jpg", "Teacher"],
-["6", "Linda Romano", "lindaRomano.png", "Waitress"],
-["7", "Antonella Greco", "antonella.jpg", "Physiotherapist"],
-["8", "Andrea Romanini", "andreaRomanini.jpg", "Nurse"],
-["9", "Lucca Colombetti", "luccaColombetti.jpg", "Administrative"],
-["10", "Giovanni Grieco", "giovanniGrieco.jpeg", "Carer"],
-["11", "Angelo Marinazzo", "angelo.jpg", "Waiter"],
-["12", "Francesca Roman", "fRoman.jpeg", "Doctor"],
-["13", "Benito Camela", "benitoCamela.jpg", "Security"],
-["14", "Lia Grechi", "liaGrechi.png", "Teacher"],
-["15", "Davide Colombo", "davideColombo.jpeg", "Chef"]
-];
+
 
 $(document).ready(function(){
 		fetch(`/people/numberPeople`)
@@ -59,6 +40,7 @@ function contentIndexSelected(number){
 			return response.json();
 		})
 		.then(function(data) {
+			console.log(data);
 			data.map(fillPerson);
 		});
 }
