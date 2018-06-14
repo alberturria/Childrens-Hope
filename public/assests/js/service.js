@@ -50,7 +50,6 @@ function serviceByLocation() {
 		locationId = 4;
 	else if (document.getElementById("naples").checked)
 		locationId = 3;
-	//FALTA EL MOSTRAR TODOS
 		
 
 	
