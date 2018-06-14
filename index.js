@@ -239,6 +239,7 @@ app.get("/locations", function(req, res) {
 
 app.get("/news", function(req, res) {
 	let myQuery = sqlDb("news");
+	myQuery.orderBy("date","desc")
 
 	myQuery
 	.then(result => {
