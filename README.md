@@ -6,6 +6,8 @@ Francisco Coca Cruz: He has developed the index pages for services, people, news
 Alberto Herrera Vargas: He has developed the description service and location description pages and part of the home page.
 Joaquín León Martínez: He has developed the pages of people profile and several of the java script files.
 
+The Back-End part has been split equitably between the developers. Each of one of us has linked three pages more or less to Heroku.
+
 Client-side languages:
 HTML, CSS and javascript
 
