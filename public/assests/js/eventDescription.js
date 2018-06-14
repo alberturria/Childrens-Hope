@@ -34,6 +34,8 @@ function loadEvent(event) {
 }
 
 function convertDateFormat(string) {
-  var date = string.split('-');
-  return date[2] + '/' + date[1] + '/' + date[0];
+	var mydate = new Date(string);
+	var month = ["January", "February", "March", "April", "May", "June",
+	"July", "August", "September", "October", "November", "December"][mydate.getMonth()];
+	return mydate.getDate() + ' ' + month + ' ' + mydate.getFullYear();
 }
