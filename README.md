@@ -1,3 +1,6 @@
+NOTE: The Heroku server doesn't load all the data of table "events" when creates the 
+database (it only creates 2 of the 5 events), testing it in local works correctly.
+
 We developed a web page of an association devoted to help children.
 
 Distribution of work:
