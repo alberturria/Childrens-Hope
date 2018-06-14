@@ -1,21 +1,3 @@
-// variable to simulate we're receiving the data from a database
-var services = [
-// id         Name      image       description
-["0", "Canteen", "../assests/img/canteen.jpg", "Take a rest in one of our relax places" ],
-["1", "Cafe", "../assests/img/cafe.jpg", "Do you need a break? Come and try one of our coffes!"],
-["2", "Parking", "../assests/img/parking.jpg", "We have a service of underground parking for park your vehicle those rainy days"],
-["3", "Rehabilitation", "../assests/img/rehabilitation.jpg", "Enjoy a medical rehabilitation in our centers"],
-["4", "Playroom", "../assests/img/playroom.jpg", "The little ones will have fun with different games"],
-["5", "Education", "../assests/img/education.jpg", "Invest in the education of your children"]
-];
-
-// simulate the relation beetwen services and location
-var relation = [
-["0","1","3","4","5"], // Milano
-["4","5"],  // Bologna
-["0","1","4"],  // Rome
-["0","1","2","3"]  // Naples
-];
 
 $(document).ready(function(){
 	loadServices();
@@ -24,6 +6,7 @@ $(document).ready(function(){
 
 
 function loadServices(){
+	document.getElementById("services").innerHTML=''
 	document.getElementById("services").innerHtml="";
 
 	fetch(`/services`)
@@ -33,6 +16,7 @@ function loadServices(){
 		.then(function(data) {
 			data.map(addRow);
 		});
+
 
 }
 
@@ -53,34 +37,49 @@ function addRow(services) {
 
 
 
-/*function serviceByLocation() {
-	var result="";
-	var locations;
+
+function serviceByLocation() {
+	document.getElementById("services").innerHTML=''
+	var locationId;
 
 	if (document.getElementById("milano").checked)
-		locations = relation[0];
+		locationId = 1
 	else if (document.getElementById("bologna").checked)
-		locations = relation[1];
+		locationId = 2;
 	else if (document.getElementById("rome").checked)
-		locations = relation[2];
+		locationId = 4;
 	else if (document.getElementById("naples").checked)
-		locations = relation[3];
-	else // All
-		locations = ["0","1","2","3","4","5"];
+		locationId = 3;
+	//FALTA EL MOSTRAR TODOS
+		
 
-	for (var i=0; i<locations.length; i++) {
-		var current = services[parseInt(locations[i])];
-		result += '<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">'+
-			'<div class="tm-margin-b-30 tm-content-box">'+
-				'<a href="serviceDescription.html?service='+current[1]+'">'+
-					'<img src="'+current[2]+'" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">'+
-					'<h4 class="textoIndice"><center>'+current[1]+'</center></h4>'+
-				'</a>'+
-				'<p>'+current[3]+'</p>'+
-			'</div>'+
-		'</div>';
-	}
-
-	document.getElementById("services").innerHTML= result;
+	
+	fetch(`/placed/location/${locationId}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			data.map(ServicesByLocation2);
+		});
+	
 }
-*/
+
+function ServicesByLocation2(idl){
+		fetch(`/services/${idl.id_s}`)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(services) {
+
+document.getElementById("services").innerHTML+='<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">'+
+				'<div class="tm-margin-b-30 tm-content-box">'+
+					'<a href="serviceDescription.html?service='+services[0].id+'">'+
+						'<img src="'+services[0].image+'" alt="Image" class="tm-margin-b-20 img-fluid serviceImageIndex">'+
+						'<h4 class="textoIndice"><center>'+services[0].name+'</center></h4>'+
+					'</a>'+
+					'<p>'+services[0].description+'</p>'+
+				'</div>'+
+			'</div>';
+		});
+
+}
