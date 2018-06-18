@@ -9,14 +9,14 @@
   {
     "id": 2,
     "name": "Solidary run",
-    "description": "This Friday will be the last edition of the Solidarity race. As always, you are invited to participate in this non-profit career. All the money raised will go to research against Down syndrome. See you there!",
+    "description": "This Friday will be the last edition of the Solidarity race. As always, you are invited to participate in this non-profit career. All the money raised will go to research against Down syndrome. See you there! the first 50 have free t-shirt!",
     "img":"run.png",
     "date":"2018-05-21"
   },
   {
     "id": 3,
     "name": "Barbecue in the park",
-    "description": "During the next Saturday we will celebrate a barbecue in order to promote socialization among residents in our centers. Any person who makes use of our services will enjoy an offer at the barbecue. Standard price - 10 Euro Partner price - 6 Euro",
+    "description": "During the next Sunday we will celebrate a barbecue in order to promote socialization among residents in our centers. Any person who makes use of our services will enjoy an offer at the barbecue. Standard price (with one drink) - 10 Euro Partner price - 6 Euro",
     "img":"barbacue.jpg",
     "date":"2018-05-05"
   },
@@ -30,7 +30,7 @@
   {
     "id": 5,
     "name": "Football tournament against cancer",
-    "description": "As in the last three years, the last Saturday of June will take place the tournament against cancer in Milan. We will have the fields of the CUS to host the tournament. The price of registration per team is 25 Euro, which will go to research the cure of cancer. The winning team will be awarded a cup.",
+    "description": "As in the last three years, the last Saturday of June will take place the tournament against cancer in Milan. We will have the fields of the CUS to host the tournament. The price of registration per team is 20 euro for adults and 12 euro for kids, which will go to research the cure of cancer. The winning team will be awarded a cup.",
     "img":"football.jpg",
     "date":"2017-04-25"
   }
