@@ -3,7 +3,7 @@
 		"id": 1,
 		"name": "Maurizia Jhonson",
 		"email": "MJhonson@csHope.com",
-        "description": "I studied Bussines & Managment in 'Università degli studi di Milano'.",
+        "description": "I studied Bussines & Managment in 'Università degli studi di Milano'. Now I want to help everyone",
         "role":"Assistant",
         "image":"mauriziaJhonson.jpeg"
 	},
@@ -11,7 +11,7 @@
 		"id": 2,
 		"name": "Pietro Baldi",
 		"email": "pBaldi@csHope.com",
-        "description": "I love to guide young people with different needs, and help them.",
+        "description": "I love to guide young people with different needs.",
         "role":"Assistant",
         "image":"pietroBaldi.jpeg"
 	},
@@ -19,7 +19,7 @@
 		"id": 3,
 		"name": "Lamberta Pérez",
 		"email": "lPerez@csHope.com",
-        "description": "I wanted a change in my life, I am happier now helping other people.",
+        "description": "I wanted a change in my life,  I am happier helping other people.",
         "role":"Lawyer",
         "image":"lambertaPerez.jpeg"
 	},
@@ -27,7 +27,7 @@
 		"id": 4,
 		"name": "Nadia Ferrari",
 		"email": "nFerrari@csHope.com",
-        "description": "I studied medicine in 'Universidad de Granada'.",
+        "description": "I studied medicine in 'Universidad de Granada' in my Erasmus internship.",
         "role":"Psychiatrist",
         "image":"nadiaFerrari.jpg"
 	},
@@ -75,7 +75,7 @@
 		"id": 10,
 		"name": "Lucca Colombetti",
 		"email": "lColombetti@csHope.com",
-        "description": "My passion is the paperwork.",
+        "description": "My passion is the paperwork and help people",
         "role":"Administrative",
         "image":"luccaColombetti.jpg"
 	},
@@ -99,7 +99,7 @@
 		"id": 13,
 		"name": "Francesca Roman",
 		"email": "fRomanatti@csHope.com",
-        "description": "Healing the world.",
+        "description": "Healing the world between everyone",
         "role":"Doctor",
         "image":"fRoman.jpeg"
 	},
@@ -115,7 +115,7 @@
 		"id": 15,
 		"name": "Lia Grechi",
 		"email": "lGrechi@csHope.com",
-        "description": "My dream is to teach everyone.",
+        "description": "My dream is to teach everyone who needs it.",
         "role":"Teacher",
         "image":"liaGrechi.png"
 	},
@@ -123,7 +123,7 @@
 		"id": 16,
 		"name": "Davide Colombo",
 		"email": "dColombo@csHope.com",
-        "description": "Cooking for future hopes.",
+        "description": "Cooking for future.",
         "role":"Chef",
         "image":"davideColombo.jpeg"
 	}
