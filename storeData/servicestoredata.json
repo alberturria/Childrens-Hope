@@ -9,13 +9,13 @@
     "id": 2,
     "name": "Cafe",
     "image": "../assests/img/cafe.jpg",
-    "description": "Do you need a break? Come and try one of our coffes!"
+    "description": "Do you need a break? Come and try one of our special coffes!"
   },
   {
     "id": 3,
     "name": "Parking",
     "image": "../assests/img/parking.jpg",
-    "description": "We have a service of underground parking for park your vehicle those rainy days"
+    "description": "We have a service of underground free parking for park your vehicle those rainy days"
   },
   {
     "id": 4,
@@ -27,13 +27,13 @@
     "id": 5,
     "name": "Playroom",
     "image": "../assests/img/playroom.jpg",
-    "description": "The little ones will have fun with different games"
+    "description": "The little ones will have fun with different games with our volunteers"
   },
   {
     "id": 6,
     "name": "Education",
     "image": "../assests/img/education.jpg",
-    "description":"Invest in the education of your children"
+    "description":"Invest in the education of your children with our professional teachers"
   }
 ]
 
