@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 		fetch(`/people/numberPeople`)
 		.then(function(response) {

@@ -2,7 +2,6 @@ $(document).ready(function(){
 	loadEventDescription();
 });
 
-
 function getQueryVariable() {
 	var query = document.URL;
 	var vars = query.split("=");
@@ -20,7 +19,6 @@ function loadEventDescription(){
 			data.map(loadEvent);
 		});
 }
-
 
 function loadEvent(event) {
 	document.getElementById("eventDescription").innerText= event.description;

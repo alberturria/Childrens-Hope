@@ -3,8 +3,6 @@ $(document).ready(function(){
 	loadServices();
 });
 
-
-
 function loadServices(){
 	document.getElementById("services").innerHTML=''
 	document.getElementById("services").innerHtml="";
@@ -16,8 +14,6 @@ function loadServices(){
 		.then(function(data) {
 			data.map(addRow);
 		});
-
-
 }
 
 function addRow(services) {
@@ -51,8 +47,6 @@ function serviceByLocation() {
 	else if (document.getElementById("naples").checked)
 		locationId = 3;
 		
-
-	
 	fetch(`/placed/location/${locationId}`)
 		.then(function(response) {
 			return response.json();
@@ -60,7 +54,6 @@ function serviceByLocation() {
 		.then(function(data) {
 			data.map(ServicesByLocation2);
 		});
-	
 }
 
 function ServicesByLocation2(idl){

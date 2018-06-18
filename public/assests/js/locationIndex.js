@@ -12,11 +12,7 @@ function loadLocations(){
             data.map(addRow);
             console.log(data);
         });
-        
-
 }
-
-
 
 function addRow(locations) {
 	let result="";

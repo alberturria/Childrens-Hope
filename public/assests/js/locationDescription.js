@@ -2,7 +2,6 @@ $(document).ready(function(){
 	loadlocationDescription();
 });
 
-
 function getQueryVariable() {
 	var query = document.URL;
 	var vars = query.split("=");
@@ -11,8 +10,6 @@ function getQueryVariable() {
 
 function loadlocationDescription(){
 	var city = getQueryVariable();
-
-	
 
 	fetch(`/locations/${city}`)
 		.then(function(response) {
@@ -34,8 +31,6 @@ function loadlocationDescription(){
 function loadPlaced(){
 	var city = getQueryVariable();
 
-	
-
 	fetch(`/placeds/${city}`)
 		.then(function(response) {
 			return response.json();
@@ -45,13 +40,10 @@ function loadPlaced(){
 		});
 }
 
-
-
 function addRow(location) {
 	document.getElementById("locationDescription").innerText= location.description;
 	document.getElementById("locationImg").src="../assests/img/"+location.img;
 	document.getElementById("locationTittle").innerHTML=location.name;
-
 }
 
 function writeServices(idl){
