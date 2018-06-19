@@ -17,7 +17,7 @@ HTML, CSS and javascript
 Template used: http://www.templatemo.com/tm-488-classic
 
 Main problems:
-We have had problems with the uploud of the project to bitBucket, and to Heroku. Actually, the app doesn't work in Heroku, but it works in local.
+We have had problems with the uploud of the project to bitBucket, and to Heroku.
 We made the app initially in GitHub, so we import the project from GitHub to BitBucket, hence the commits are done with our user account of GitHub, this are the equivalences between the accounts and our real name/code person:
 Paco - Francisco Coca Cruz / 10623424
 Alberturria - Alberto Herrera Vargas / 10623443
