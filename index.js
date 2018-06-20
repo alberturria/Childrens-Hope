@@ -237,16 +237,14 @@ app.get("/locations", function(req, res) {
 	});
 });
 
-	//let start = parseInt(_.get(req, "query.start", 0));
-	//let limit = parseInt(_.get(req, "query.limit", 5));
 app.get("/news", function(req, res) {
 	let myQuery = sqlDb("news");
 	let sortby = _.get(req, "query.sort", "none");
 	myQuery.orderBy("date","desc")
 
-	if (sortby === "age") {
+	if (sortby === "date") {
 		myQuery = myQuery.orderBy("date", "asc");
-	} else if (sortby === "-age") {
+	} else if (sortby === "-date") {
 		myQuery = myQuery.orderBy("date","desc");
 	}
 
