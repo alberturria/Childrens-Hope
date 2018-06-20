@@ -12,7 +12,7 @@ function initSqlDB() {
 			client: "sqlite3",
 			debug: true,
 			connection: {
-			filename: "./childrensHopeDb.sqlite"
+			filename: "./other/childrensHopeDb.sqlite"
 			},
 			useNullAsDefault: true
 		});
