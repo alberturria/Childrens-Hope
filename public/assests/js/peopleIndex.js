@@ -33,12 +33,11 @@ function chooseIndexSelected(number, nPages){
 function contentIndexSelected(number){
 	document.getElementById("indexPeopleContent").innerHTML="";
 	
-	fetch(`/people/start/${(number-1)*6}`)
+	fetch(`/people?start=${(number-1)*6}?&sort=name`)
 		.then(function(response) {
 			return response.json();
 		})
 		.then(function(data) {
-			console.log(data);
 			data.map(fillPerson);
 		});
 }

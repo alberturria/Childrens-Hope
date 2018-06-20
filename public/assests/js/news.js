@@ -5,7 +5,7 @@ $(document).ready(function(){
 function loadNews(){
 	document.getElementById("myNews").innerHtml="";
 
-	fetch(`/news`)
+	fetch(`/news?sort=-date`)
 		.then(function(response) {
 			return response.json();
 		})

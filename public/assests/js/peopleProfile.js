@@ -20,7 +20,7 @@ function loadPeoplePage(){
 		data.map(addBasicData);
 	});
 
-	fetch(`/participates/person/${id}`)
+	fetch(`/people/${id}/services`)
 	.then(function(response) {
 		return response.json();
 	})

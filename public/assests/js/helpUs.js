@@ -6,7 +6,6 @@ function sendDonation(){
 }
 
 function checkWrite(){
-	console.log(document.getElementById("nameContact").value.length);
 	if(document.getElementById("quantity").value.length>0 &&
 	   document.getElementById("nameContact").value.length>0)
 		document.getElementById("donateButton").removeAttribute("disabled");

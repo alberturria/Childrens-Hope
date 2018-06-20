@@ -47,7 +47,7 @@ function serviceByLocation() {
 	else if (document.getElementById("naples").checked)
 		locationId = 3;
 		
-	fetch(`/placed/location/${locationId}`)
+	fetch(`/locations/${locationId}/services`)
 		.then(function(response) {
 			return response.json();
 		})

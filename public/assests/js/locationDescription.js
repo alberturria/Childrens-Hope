@@ -19,24 +19,12 @@ function loadlocationDescription(){
 			data.map(addRow);
 		});
 
-	fetch(`/placed/location/${city}`)
+	fetch(`/locations/${city}/services`)
 		.then(function(response) {
 			return response.json();
 		})
 		.then(function(data) {
 			data.map(writeServices);
-		});
-}
-
-function loadPlaced(){
-	var city = getQueryVariable();
-
-	fetch(`/placeds/${city}`)
-		.then(function(response) {
-			return response.json();
-		})
-		.then(function(data) {
-			data.map(addRow);
 		});
 }
 
@@ -49,7 +37,6 @@ function addRow(location) {
 function writeServices(idl){
 	fetch(`/services/${idl.id_s}`)
 		.then(function(response) {
-			console.log(response);
 			return response.json();
 		})
 		.then(function(service) {

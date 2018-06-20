@@ -237,9 +237,18 @@ app.get("/locations", function(req, res) {
 	});
 });
 
+	//let start = parseInt(_.get(req, "query.start", 0));
+	//let limit = parseInt(_.get(req, "query.limit", 5));
 app.get("/news", function(req, res) {
 	let myQuery = sqlDb("news");
+	let sortby = _.get(req, "query.sort", "none");
 	myQuery.orderBy("date","desc")
+
+	if (sortby === "age") {
+		myQuery = myQuery.orderBy("date", "asc");
+	} else if (sortby === "-age") {
+		myQuery = myQuery.orderBy("date","desc");
+	}
 
 	myQuery
 	.then(result => {
@@ -266,12 +275,18 @@ app.get("/services/:id", function(req, res) {
 	});
 });
 
-app.get("/people/start/:idStart", function(req, res) {
+app.get("/people", function(req, res) {
 	let idStart = parseInt(req.params.idStart);
-	let start = parseInt(_.get(req, "query.start", idStart));
-	let limit = parseInt(_.get(req, "query.limit", 6));		
+	let start = parseInt(_.get(req, "query.start", 1));
+	let limit = parseInt(_.get(req, "query.limit", 6));
+	let sortby = _.get(req, "query.sort", "none");
 	let myQuery = sqlDb("people");
-	myQuery = myQuery.orderBy("name","asc");
+
+	if (sortby === "name") {
+		myQuery = myQuery.orderBy("name", "asc");
+	} else if (sortby === "-name") {
+		myQuery = myQuery.orderBy("name","desc");
+	}
 
 	myQuery
 		.limit(limit)
@@ -318,7 +333,7 @@ app.get("/events/:id", function(req, res) {
 	});
 });
 
-app.get("/placed/location/:id_l", function(req, res) {
+app.get("/locations/:id_l/services", function(req, res) {
 	let id_l = parseInt(req.params.id_l);
 	let myQuery = sqlDb("placed").where("id_l",id_l);
 
@@ -328,7 +343,7 @@ app.get("/placed/location/:id_l", function(req, res) {
 	});
 });
 
-app.get("/placed/service/:id_s", function(req, res) {
+app.get("/services/:id_s/locations", function(req, res) {
 	let id_s = parseInt(req.params.id_s);
 	let myQuery = sqlDb("placed").where("id_s",id_s);
 
@@ -339,7 +354,7 @@ app.get("/placed/service/:id_s", function(req, res) {
 });
 
 
-app.get("/participates/person/:id_p", function(req, res) {
+app.get("/people/:id_p/services", function(req, res) {
 	let id_p = parseInt(req.params.id_p);
 	let myQuery = sqlDb("participates").where("id_p",id_p);
 
@@ -350,7 +365,7 @@ app.get("/participates/person/:id_p", function(req, res) {
 });
 
 
-app.get("/participates/service/:id_s", function(req, res) {
+app.get("/services/:id_s/people", function(req, res) {
 	let id_s = parseInt(req.params.id_s);
 	let myQuery = sqlDb("participates").where("id_s",id_s);
 

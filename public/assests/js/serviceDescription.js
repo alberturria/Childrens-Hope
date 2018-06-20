@@ -19,7 +19,7 @@ function loadServiceDescription(){
 			data.map(fillBasicData);
 		});
 
-	fetch(`/placed/service/${serviceId}`)
+	fetch(`/services/${serviceId}/locations`)
 		.then(function(response) {
 			return response.json();
 		})
@@ -27,7 +27,7 @@ function loadServiceDescription(){
 			data.map(fillServiceData);
 		});
 
-	fetch(`/participates/service/${serviceId}`)
+	fetch(`/services/${serviceId}/people`)
 		.then(function(response) {
 			return response.json();
 		})

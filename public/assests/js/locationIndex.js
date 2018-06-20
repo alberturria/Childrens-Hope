@@ -10,7 +10,6 @@ function loadLocations(){
 		})
 		.then(function(data) {
             data.map(addRow);
-            console.log(data);
         });
 }
 
