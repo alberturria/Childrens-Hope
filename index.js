@@ -205,13 +205,13 @@ const _ = require("lodash");
 
 let serverPort = process.env.PORT || 5000;
 
-let locationsList = require("./storeData/locationstoredata.json");
-let eventsList = require("./storeData/eventstoredata.json");
-let newsList = require("./storeData/newstoredata.json");
-let peopleList = require("./storeData/personstoredata.json");
-let servicesList = require("./storeData/servicestoredata.json");
-let placedList = require("./storeData/placedstoredata.json");
-let participatesList = require("./storeData/participatestoredata.json");
+let locationsList = require("./other/locationstoredata.json");
+let eventsList = require("./other/eventstoredata.json");
+let newsList = require("./other/newstoredata.json");
+let peopleList = require("./other/personstoredata.json");
+let servicesList = require("./other/servicestoredata.json");
+let placedList = require("./other/placedstoredata.json");
+let participatesList = require("./other/participatestoredata.json");
 
 app.use(express.static(__dirname + "/public"));
 
